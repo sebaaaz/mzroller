@@ -1,24 +1,24 @@
 {
   "files": {
-    "app.js": "/static/js/app.ca860da3.chunk.js",
-    "app.js.map": "/static/js/app.ca860da3.chunk.js.map",
-    "runtime~app.js": "/static/js/runtime~app.2e9f1821.js",
-    "runtime~app.js.map": "/static/js/runtime~app.2e9f1821.js.map",
-    "static/js/2.98f998cf.chunk.js": "/static/js/2.98f998cf.chunk.js",
-    "static/js/2.98f998cf.chunk.js.map": "/static/js/2.98f998cf.chunk.js.map",
-    "favicon-16.png": "/favicon-16.png",
-    "favicon-32.png": "/favicon-32.png",
-    "favicon.ico": "/favicon.ico",
-    "index.html": "/index.html",
-    "manifest.json": "/manifest.json",
-    "serve.json": "/serve.json",
-    "static/js/2.98f998cf.chunk.js.LICENSE.txt": "/static/js/2.98f998cf.chunk.js.LICENSE.txt",
-    "static/media/facebook-icon.png": "/static/media/facebook-icon.a5b426fe.png",
-    "static/media/whatsapp-icon.png": "/static/media/whatsapp-icon.c0870d10.png"
+    "app.js": "/mzroller/static/js/app.ca860da3.chunk.js",
+    "app.js.map": "/mzroller/static/js/app.ca860da3.chunk.js.map",
+    "runtime~app.js": "/mzroller/static/js/runtime~app.bb39cb83.js",
+    "runtime~app.js.map": "/mzroller/static/js/runtime~app.bb39cb83.js.map",
+    "static/js/2.80c9f067.chunk.js": "/mzroller/static/js/2.80c9f067.chunk.js",
+    "static/js/2.80c9f067.chunk.js.map": "/mzroller/static/js/2.80c9f067.chunk.js.map",
+    "favicon-16.png": "/mzroller/favicon-16.png",
+    "favicon-32.png": "/mzroller/favicon-32.png",
+    "favicon.ico": "/mzroller/favicon.ico",
+    "index.html": "/mzroller/index.html",
+    "manifest.json": "/mzroller/manifest.json",
+    "serve.json": "/mzroller/serve.json",
+    "static/js/2.80c9f067.chunk.js.LICENSE.txt": "/mzroller/static/js/2.80c9f067.chunk.js.LICENSE.txt",
+    "static/media/facebook-icon.png": "/mzroller/static/media/facebook-icon.a5b426fe.png",
+    "static/media/whatsapp-icon.png": "/mzroller/static/media/whatsapp-icon.c0870d10.png"
   },
   "entrypoints": [
-    "static/js/runtime~app.2e9f1821.js",
-    "static/js/2.98f998cf.chunk.js",
+    "static/js/runtime~app.bb39cb83.js",
+    "static/js/2.80c9f067.chunk.js",
     "static/js/app.ca860da3.chunk.js"
   ]
 }
