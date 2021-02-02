@@ -1,24 +1,29 @@
 {
   "files": {
-    "app.js": "/mzroller/static/js/app.b4d6339b.chunk.js",
-    "app.js.map": "/mzroller/static/js/app.b4d6339b.chunk.js.map",
+    "app.js": "/mzroller/static/js/app.83e73224.chunk.js",
+    "app.js.map": "/mzroller/static/js/app.83e73224.chunk.js.map",
     "runtime~app.js": "/mzroller/static/js/runtime~app.bb39cb83.js",
     "runtime~app.js.map": "/mzroller/static/js/runtime~app.bb39cb83.js.map",
-    "static/js/2.80c9f067.chunk.js": "/mzroller/static/js/2.80c9f067.chunk.js",
-    "static/js/2.80c9f067.chunk.js.map": "/mzroller/static/js/2.80c9f067.chunk.js.map",
+    "static/js/2.8054d40c.chunk.js": "/mzroller/static/js/2.8054d40c.chunk.js",
+    "static/js/2.8054d40c.chunk.js.map": "/mzroller/static/js/2.8054d40c.chunk.js.map",
+    "fonts/Entypo.ttf": "/mzroller/./fonts/Entypo.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/mzroller/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/mzroller/favicon-16.png",
     "favicon-32.png": "/mzroller/favicon-32.png",
     "favicon.ico": "/mzroller/favicon.ico",
     "index.html": "/mzroller/index.html",
     "manifest.json": "/mzroller/manifest.json",
     "serve.json": "/mzroller/serve.json",
-    "static/js/2.80c9f067.chunk.js.LICENSE.txt": "/mzroller/static/js/2.80c9f067.chunk.js.LICENSE.txt",
+    "static/js/2.8054d40c.chunk.js.LICENSE.txt": "/mzroller/static/js/2.8054d40c.chunk.js.LICENSE.txt",
     "static/media/facebook-icon.png": "/mzroller/static/media/facebook-icon.a5b426fe.png",
+    "static/media/starEmpty.png": "/mzroller/static/media/starEmpty.f1373958.png",
+    "static/media/starFilled.png": "/mzroller/static/media/starFilled.47332bc8.png",
+    "static/media/starHalf.png": "/mzroller/static/media/starHalf.57a8cb59.png",
     "static/media/whatsapp-icon.png": "/mzroller/static/media/whatsapp-icon.c0870d10.png"
   },
   "entrypoints": [
     "static/js/runtime~app.bb39cb83.js",
-    "static/js/2.80c9f067.chunk.js",
-    "static/js/app.b4d6339b.chunk.js"
+    "static/js/2.8054d40c.chunk.js",
+    "static/js/app.83e73224.chunk.js"
   ]
 }
