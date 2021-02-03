@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/mzroller/static/js/app.691b6d17.chunk.js",
-    "app.js.map": "/mzroller/static/js/app.691b6d17.chunk.js.map",
+    "app.js": "/mzroller/static/js/app.9d21a2a8.chunk.js",
+    "app.js.map": "/mzroller/static/js/app.9d21a2a8.chunk.js.map",
     "runtime~app.js": "/mzroller/static/js/runtime~app.bb39cb83.js",
     "runtime~app.js.map": "/mzroller/static/js/runtime~app.bb39cb83.js.map",
-    "static/js/2.275a7abe.chunk.js": "/mzroller/static/js/2.275a7abe.chunk.js",
-    "static/js/2.275a7abe.chunk.js.map": "/mzroller/static/js/2.275a7abe.chunk.js.map",
+    "static/js/2.65b26b58.chunk.js": "/mzroller/static/js/2.65b26b58.chunk.js",
+    "static/js/2.65b26b58.chunk.js.map": "/mzroller/static/js/2.65b26b58.chunk.js.map",
     "fonts/Entypo.ttf": "/mzroller/./fonts/Entypo.ttf",
     "fonts/MaterialCommunityIcons.ttf": "/mzroller/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/mzroller/favicon-16.png",
@@ -14,7 +14,7 @@
     "index.html": "/mzroller/index.html",
     "manifest.json": "/mzroller/manifest.json",
     "serve.json": "/mzroller/serve.json",
-    "static/js/2.275a7abe.chunk.js.LICENSE.txt": "/mzroller/static/js/2.275a7abe.chunk.js.LICENSE.txt",
+    "static/js/2.65b26b58.chunk.js.LICENSE.txt": "/mzroller/static/js/2.65b26b58.chunk.js.LICENSE.txt",
     "static/media/003482d86ebf860fcba632acc89e786c_800x600.jpg": "/mzroller/static/media/003482d86ebf860fcba632acc89e786c_800x600.cbebbd5f.jpg",
     "static/media/050e3430d85e74f77a7ba780f4969e73_800x1068.jpg": "/mzroller/static/media/050e3430d85e74f77a7ba780f4969e73_800x1068.b36eab6b.jpg",
     "static/media/0c9c8ef18a8d67b57e20e6db7e2dfa1d.jpg": "/mzroller/static/media/0c9c8ef18a8d67b57e20e6db7e2dfa1d.1853eb73.jpg",
@@ -189,7 +189,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.bb39cb83.js",
-    "static/js/2.275a7abe.chunk.js",
-    "static/js/app.691b6d17.chunk.js"
+    "static/js/2.65b26b58.chunk.js",
+    "static/js/app.9d21a2a8.chunk.js"
   ]
 }
