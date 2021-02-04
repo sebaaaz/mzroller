@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/mzroller/static/js/app.d20b9d5a.chunk.js",
-    "app.js.map": "/mzroller/static/js/app.d20b9d5a.chunk.js.map",
+    "app.js": "/mzroller/static/js/app.11778fc4.chunk.js",
+    "app.js.map": "/mzroller/static/js/app.11778fc4.chunk.js.map",
     "runtime~app.js": "/mzroller/static/js/runtime~app.bb39cb83.js",
     "runtime~app.js.map": "/mzroller/static/js/runtime~app.bb39cb83.js.map",
-    "static/js/2.dd5b939d.chunk.js": "/mzroller/static/js/2.dd5b939d.chunk.js",
-    "static/js/2.dd5b939d.chunk.js.map": "/mzroller/static/js/2.dd5b939d.chunk.js.map",
+    "static/js/2.7e99281c.chunk.js": "/mzroller/static/js/2.7e99281c.chunk.js",
+    "static/js/2.7e99281c.chunk.js.map": "/mzroller/static/js/2.7e99281c.chunk.js.map",
     "fonts/Entypo.ttf": "/mzroller/./fonts/Entypo.ttf",
     "fonts/MaterialCommunityIcons.ttf": "/mzroller/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/mzroller/favicon-16.png",
@@ -14,7 +14,7 @@
     "index.html": "/mzroller/index.html",
     "manifest.json": "/mzroller/manifest.json",
     "serve.json": "/mzroller/serve.json",
-    "static/js/2.dd5b939d.chunk.js.LICENSE.txt": "/mzroller/static/js/2.dd5b939d.chunk.js.LICENSE.txt",
+    "static/js/2.7e99281c.chunk.js.LICENSE.txt": "/mzroller/static/js/2.7e99281c.chunk.js.LICENSE.txt",
     "static/media/050e3430d85e74f77a7ba780f4969e73_800x1068.jpg": "/mzroller/static/media/050e3430d85e74f77a7ba780f4969e73_800x1068.b36eab6b.jpg",
     "static/media/0c9c8ef18a8d67b57e20e6db7e2dfa1d.jpg": "/mzroller/static/media/0c9c8ef18a8d67b57e20e6db7e2dfa1d.1853eb73.jpg",
     "static/media/0cb3bdef908cd4b612341020fa65d966_800x600.jpg": "/mzroller/static/media/0cb3bdef908cd4b612341020fa65d966_800x600.4baa1ac8.jpg",
@@ -124,6 +124,7 @@
     "static/media/a650889dfe404dca0747675bc60f7d58_800x600.jpg": "/mzroller/static/media/a650889dfe404dca0747675bc60f7d58_800x600.fc7138bf.jpg",
     "static/media/ab11f8f1c8eccd72c7cdaac94c2a7d16.jpg": "/mzroller/static/media/ab11f8f1c8eccd72c7cdaac94c2a7d16.5d997018.jpg",
     "static/media/ad108bb0c37b604d7dc5d4a206a1ac1c_800x1068.jpg": "/mzroller/static/media/ad108bb0c37b604d7dc5d4a206a1ac1c_800x1068.fe5ad152.jpg",
+    "static/media/autoshopping_la_serena.png": "/mzroller/static/media/autoshopping_la_serena.2543e028.png",
     "static/media/b02ae51e79cf2d5daf98287fbf59cabf.jpg": "/mzroller/static/media/b02ae51e79cf2d5daf98287fbf59cabf.92aa57c8.jpg",
     "static/media/b51a664b0181e4fd36e4151b01aa832b_800x600.jpg": "/mzroller/static/media/b51a664b0181e4fd36e4151b01aa832b_800x600.19b081d0.jpg",
     "static/media/b5c6af6c24004cea9769252c52213186_800x1068.jpg": "/mzroller/static/media/b5c6af6c24004cea9769252c52213186_800x1068.ca87a8ff.jpg",
@@ -147,6 +148,8 @@
     "static/media/c9825db66de20d7606cbbcd8d0925d38.jpg": "/mzroller/static/media/c9825db66de20d7606cbbcd8d0925d38.33d6f8ba.jpg",
     "static/media/ca0215843ad9df884f64cabfa618d2bf_800x600.jpg": "/mzroller/static/media/ca0215843ad9df884f64cabfa618d2bf_800x600.a287dc09.jpg",
     "static/media/cf3ef7fa89e38218c0ac2bb984470d96_400x400.jpg": "/mzroller/static/media/cf3ef7fa89e38218c0ac2bb984470d96_400x400.b85ff325.jpg",
+    "static/media/constructora_cadel.png": "/mzroller/static/media/constructora_cadel.fd0e0727.png",
+    "static/media/constructora_ecomac.svg": "/mzroller/static/media/constructora_ecomac.99264dad.svg",
     "static/media/d0a831d2d9b830458ef189244efccfb9_800x1068.jpg": "/mzroller/static/media/d0a831d2d9b830458ef189244efccfb9_800x1068.99945805.jpg",
     "static/media/d2c52138d25e481e6749a178f0e47acf.jpg": "/mzroller/static/media/d2c52138d25e481e6749a178f0e47acf.387a6938.jpg",
     "static/media/d2d243319d73cf3cbe9b167b1756be98_800x600.jpg": "/mzroller/static/media/d2d243319d73cf3cbe9b167b1756be98_800x600.f72c4b73.jpg",
@@ -179,14 +182,23 @@
     "static/media/facebook-icon.png": "/mzroller/static/media/facebook-icon.a5b426fe.png",
     "static/media/fc3470c34917a77af69ef7868f89e9a4_800x600.jpg": "/mzroller/static/media/fc3470c34917a77af69ef7868f89e9a4_800x600.028697bc.jpg",
     "static/media/fd7ae101f3f61b02ed776018e1ece110_800x600.jpg": "/mzroller/static/media/fd7ae101f3f61b02ed776018e1ece110_800x600.ce41e05b.jpg",
+    "static/media/inmobiliaria_guzman.jpg": "/mzroller/static/media/inmobiliaria_guzman.5894f2ff.jpg",
+    "static/media/ministerio_educacion.png": "/mzroller/static/media/ministerio_educacion.c184ab43.png",
+    "static/media/ministerio_transporte.png": "/mzroller/static/media/ministerio_transporte.f4215d8f.png",
+    "static/media/municipalidad_la_serena.png": "/mzroller/static/media/municipalidad_la_serena.7378834c.png",
+    "static/media/salfa-logo-white.svg": "/mzroller/static/media/salfa-logo-white.d1738834.svg",
     "static/media/starEmpty.png": "/mzroller/static/media/starEmpty.f1373958.png",
     "static/media/starFilled.png": "/mzroller/static/media/starFilled.47332bc8.png",
     "static/media/starHalf.png": "/mzroller/static/media/starHalf.57a8cb59.png",
+    "static/media/universidad_aconcagua.png": "/mzroller/static/media/universidad_aconcagua.9db204c6.png",
+    "static/media/universidad_amazing_grace.png": "/mzroller/static/media/universidad_amazing_grace.f179e2a4.png",
+    "static/media/universidad_la_serena.png": "/mzroller/static/media/universidad_la_serena.dce4a888.png",
+    "static/media/universidad_santo_tomas.png": "/mzroller/static/media/universidad_santo_tomas.d8e8a0ca.png",
     "static/media/whatsapp-icon.png": "/mzroller/static/media/whatsapp-icon.c0870d10.png"
   },
   "entrypoints": [
     "static/js/runtime~app.bb39cb83.js",
-    "static/js/2.dd5b939d.chunk.js",
-    "static/js/app.d20b9d5a.chunk.js"
+    "static/js/2.7e99281c.chunk.js",
+    "static/js/app.11778fc4.chunk.js"
   ]
 }
