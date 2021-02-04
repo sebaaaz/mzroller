@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/mzroller/static/js/app.18412cbc.chunk.js",
-    "app.js.map": "/mzroller/static/js/app.18412cbc.chunk.js.map",
+    "app.js": "/mzroller/static/js/app.d20b9d5a.chunk.js",
+    "app.js.map": "/mzroller/static/js/app.d20b9d5a.chunk.js.map",
     "runtime~app.js": "/mzroller/static/js/runtime~app.bb39cb83.js",
     "runtime~app.js.map": "/mzroller/static/js/runtime~app.bb39cb83.js.map",
     "static/js/2.dd5b939d.chunk.js": "/mzroller/static/js/2.dd5b939d.chunk.js",
@@ -187,6 +187,6 @@
   "entrypoints": [
     "static/js/runtime~app.bb39cb83.js",
     "static/js/2.dd5b939d.chunk.js",
-    "static/js/app.18412cbc.chunk.js"
+    "static/js/app.d20b9d5a.chunk.js"
   ]
 }
