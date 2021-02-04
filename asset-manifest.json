@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/mzroller/static/js/app.9d21a2a8.chunk.js",
-    "app.js.map": "/mzroller/static/js/app.9d21a2a8.chunk.js.map",
+    "app.js": "/mzroller/static/js/app.18412cbc.chunk.js",
+    "app.js.map": "/mzroller/static/js/app.18412cbc.chunk.js.map",
     "runtime~app.js": "/mzroller/static/js/runtime~app.bb39cb83.js",
     "runtime~app.js.map": "/mzroller/static/js/runtime~app.bb39cb83.js.map",
-    "static/js/2.65b26b58.chunk.js": "/mzroller/static/js/2.65b26b58.chunk.js",
-    "static/js/2.65b26b58.chunk.js.map": "/mzroller/static/js/2.65b26b58.chunk.js.map",
+    "static/js/2.dd5b939d.chunk.js": "/mzroller/static/js/2.dd5b939d.chunk.js",
+    "static/js/2.dd5b939d.chunk.js.map": "/mzroller/static/js/2.dd5b939d.chunk.js.map",
     "fonts/Entypo.ttf": "/mzroller/./fonts/Entypo.ttf",
     "fonts/MaterialCommunityIcons.ttf": "/mzroller/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/mzroller/favicon-16.png",
@@ -14,8 +14,7 @@
     "index.html": "/mzroller/index.html",
     "manifest.json": "/mzroller/manifest.json",
     "serve.json": "/mzroller/serve.json",
-    "static/js/2.65b26b58.chunk.js.LICENSE.txt": "/mzroller/static/js/2.65b26b58.chunk.js.LICENSE.txt",
-    "static/media/003482d86ebf860fcba632acc89e786c_800x600.jpg": "/mzroller/static/media/003482d86ebf860fcba632acc89e786c_800x600.cbebbd5f.jpg",
+    "static/js/2.dd5b939d.chunk.js.LICENSE.txt": "/mzroller/static/js/2.dd5b939d.chunk.js.LICENSE.txt",
     "static/media/050e3430d85e74f77a7ba780f4969e73_800x1068.jpg": "/mzroller/static/media/050e3430d85e74f77a7ba780f4969e73_800x1068.b36eab6b.jpg",
     "static/media/0c9c8ef18a8d67b57e20e6db7e2dfa1d.jpg": "/mzroller/static/media/0c9c8ef18a8d67b57e20e6db7e2dfa1d.1853eb73.jpg",
     "static/media/0cb3bdef908cd4b612341020fa65d966_800x600.jpg": "/mzroller/static/media/0cb3bdef908cd4b612341020fa65d966_800x600.4baa1ac8.jpg",
@@ -34,7 +33,6 @@
     "static/media/26bd5a12fba8b6ddbab4d3932d1e6561_800x1068.jpg": "/mzroller/static/media/26bd5a12fba8b6ddbab4d3932d1e6561_800x1068.f0f451f2.jpg",
     "static/media/26e935653c9391fa995db0d754fb42c6.jpg": "/mzroller/static/media/26e935653c9391fa995db0d754fb42c6.32a891a1.jpg",
     "static/media/2c1b62a25e2ff6ad4531858d93044089.jpg": "/mzroller/static/media/2c1b62a25e2ff6ad4531858d93044089.5682f8e0.jpg",
-    "static/media/2c1b62a25e2ff6ad4531858d93044089_880x1032.jpg": "/mzroller/static/media/2c1b62a25e2ff6ad4531858d93044089_880x1032.c5418df2.jpg",
     "static/media/2c84c1ef009dffd950d6d3c716c5d873_800x600.jpg": "/mzroller/static/media/2c84c1ef009dffd950d6d3c716c5d873_800x600.16eb3e3f.jpg",
     "static/media/2f4f1b461b1fe83cc52e26d8ffb8e217.jpg": "/mzroller/static/media/2f4f1b461b1fe83cc52e26d8ffb8e217.718959a3.jpg",
     "static/media/3096bb501d06773d5fba9fe717b277ae.jpg": "/mzroller/static/media/3096bb501d06773d5fba9fe717b277ae.a8cce23f.jpg",
@@ -137,7 +135,6 @@
     "static/media/bdb123a8419271e2fc53187ee19e690e.jpeg": "/mzroller/static/media/bdb123a8419271e2fc53187ee19e690e.e1ed7c1d.jpeg",
     "static/media/bf8f4143ed1867ed920b34e608aaf638.jpg": "/mzroller/static/media/bf8f4143ed1867ed920b34e608aaf638.b19d7e20.jpg",
     "static/media/c21fcc8c24965f7b47a219ac354d4e7a.jpg": "/mzroller/static/media/c21fcc8c24965f7b47a219ac354d4e7a.442a2dea.jpg",
-    "static/media/c21fcc8c24965f7b47a219ac354d4e7a_1200x588.jpg": "/mzroller/static/media/c21fcc8c24965f7b47a219ac354d4e7a_1200x588.f9bba42f.jpg",
     "static/media/c2ae311c2f6e6665fcbc2ba466c9b655_780x1041.3.jpg": "/mzroller/static/media/c2ae311c2f6e6665fcbc2ba466c9b655_780x1041.3.229d96c5.jpg",
     "static/media/c4c08a707ae34e903fb2f297e8dc3536_800x400.jpeg": "/mzroller/static/media/c4c08a707ae34e903fb2f297e8dc3536_800x400.79214dd4.jpeg",
     "static/media/c4da1b334c7717fa955ac6e235b5e1ab.jpg": "/mzroller/static/media/c4da1b334c7717fa955ac6e235b5e1ab.f4919224.jpg",
@@ -189,7 +186,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.bb39cb83.js",
-    "static/js/2.65b26b58.chunk.js",
-    "static/js/app.9d21a2a8.chunk.js"
+    "static/js/2.dd5b939d.chunk.js",
+    "static/js/app.18412cbc.chunk.js"
   ]
 }
