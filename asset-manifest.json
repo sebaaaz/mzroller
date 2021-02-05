@@ -1,12 +1,13 @@
 {
   "files": {
-    "app.js": "/mzroller/static/js/app.4994d844.chunk.js",
-    "app.js.map": "/mzroller/static/js/app.4994d844.chunk.js.map",
+    "app.js": "/mzroller/static/js/app.75bf1bd5.chunk.js",
+    "app.js.map": "/mzroller/static/js/app.75bf1bd5.chunk.js.map",
     "runtime~app.js": "/mzroller/static/js/runtime~app.bb39cb83.js",
     "runtime~app.js.map": "/mzroller/static/js/runtime~app.bb39cb83.js.map",
-    "static/js/2.7feb6e35.chunk.js": "/mzroller/static/js/2.7feb6e35.chunk.js",
-    "static/js/2.7feb6e35.chunk.js.map": "/mzroller/static/js/2.7feb6e35.chunk.js.map",
+    "static/js/2.3b2d4ec0.chunk.js": "/mzroller/static/js/2.3b2d4ec0.chunk.js",
+    "static/js/2.3b2d4ec0.chunk.js.map": "/mzroller/static/js/2.3b2d4ec0.chunk.js.map",
     "fonts/Entypo.ttf": "/mzroller/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/mzroller/./fonts/Feather.ttf",
     "fonts/MaterialCommunityIcons.ttf": "/mzroller/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/mzroller/favicon-16.png",
     "favicon-32.png": "/mzroller/favicon-32.png",
@@ -14,7 +15,7 @@
     "index.html": "/mzroller/index.html",
     "manifest.json": "/mzroller/manifest.json",
     "serve.json": "/mzroller/serve.json",
-    "static/js/2.7feb6e35.chunk.js.LICENSE.txt": "/mzroller/static/js/2.7feb6e35.chunk.js.LICENSE.txt",
+    "static/js/2.3b2d4ec0.chunk.js.LICENSE.txt": "/mzroller/static/js/2.3b2d4ec0.chunk.js.LICENSE.txt",
     "static/media/0c9c8ef18a8d67b57e20e6db7e2dfa1d.jpg": "/mzroller/static/media/0c9c8ef18a8d67b57e20e6db7e2dfa1d.1853eb73.jpg",
     "static/media/13acb858e202397fc02ed078de188afb.jpg": "/mzroller/static/media/13acb858e202397fc02ed078de188afb.a03087eb.jpg",
     "static/media/1421c02666d511bc5847c2206385d542.jpg": "/mzroller/static/media/1421c02666d511bc5847c2206385d542.189a2cab.jpg",
@@ -116,7 +117,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.bb39cb83.js",
-    "static/js/2.7feb6e35.chunk.js",
-    "static/js/app.4994d844.chunk.js"
+    "static/js/2.3b2d4ec0.chunk.js",
+    "static/js/app.75bf1bd5.chunk.js"
   ]
 }
