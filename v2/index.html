@@ -99,7 +99,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 .floor{position:absolute;inset:auto 0 0 0;height:19%;background:linear-gradient(#0a0e33,#060826)}
 .beam{position:absolute;z-index:2;left:20%;width:60%;bottom:0;height:19%;background:linear-gradient(rgba(246,210,154,.6),rgba(246,210,154,.1));clip-path:polygon(8% 0,92% 0,100% 100%,0 100%);opacity:var(--light)}
 .sill{position:absolute;z-index:3;left:11%;right:11%;top:65%;height:1.6%;background:#f4f0e6}
-.window{--band:11px;position:absolute;z-index:3;left:14%;right:14%;top:8%;height:57%;overflow:hidden;border:clamp(5px,1.3vw,9px) solid #ebe6d9;background:#ebe6d9;box-shadow:0 0 calc(var(--light) * 90px) rgba(246,210,154,calc(var(--light) * .4))}
+.window{--band:11px;position:absolute;z-index:3;left:14%;right:14%;top:8%;height:57%;overflow:hidden;border:clamp(5px,1.3vw,9px) solid #ebe6d9;background:#ebe6d9;box-shadow:0 0 calc(var(--light) * 90px) rgba(246,210,154,calc(var(--light) * .4));cursor:grab;touch-action:none}
+.window:active{cursor:grabbing}
 .view{position:absolute;inset:0}
 .view svg{width:100%;height:100%}
 .mullion{position:absolute;left:50%;top:0;bottom:0;width:6px;transform:translateX(-50%);background:#ebe6d9}
@@ -885,21 +886,21 @@ button,input,select,textarea{font:inherit;color:inherit}
   });
 
   let drag = null;
-  rail.addEventListener("pointerdown", (e) => {
+  win.addEventListener("pointerdown", (e) => {
     cancelAnimationFrame(raf);
     drag = { y: e.clientY, drop: state.drop, h: win.clientHeight };
-    rail.setPointerCapture(e.pointerId);
+    win.setPointerCapture(e.pointerId);
     scene.classList.add("is-moving");
   });
-  rail.addEventListener("pointermove", (e) => {
+  win.addEventListener("pointermove", (e) => {
     if (drag) setDrop(drag.drop + (e.clientY - drag.y) / drag.h);
   });
   const endDrag = () => {
     drag = null;
     scene.classList.remove("is-moving");
   };
-  rail.addEventListener("pointerup", endDrag);
-  rail.addEventListener("pointercancel", endDrag);
+  win.addEventListener("pointerup", endDrag);
+  win.addEventListener("pointercancel", endDrag);
 
   rail.addEventListener("keydown", (e) => {
     const steps = { ArrowUp: -0.05, ArrowLeft: -0.05, ArrowDown: 0.05, ArrowRight: 0.05, PageUp: -0.2, PageDown: 0.2 };
@@ -909,7 +910,6 @@ button,input,select,textarea{font:inherit;color:inherit}
   });
 
   win.addEventListener("click", (e) => {
-    if (e.target.closest(".rail")) return;
     const r = win.getBoundingClientRect();
     tween((e.clientY - r.top - win.clientTop) / win.clientHeight, 500);
   });
