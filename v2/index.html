@@ -113,6 +113,14 @@ button,input,select,textarea{font:inherit;color:inherit}
 .rail:focus-visible{outline:2px solid #fff;outline-offset:-4px}
 .gloss{position:absolute;inset:0;z-index:6;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.16),rgba(255,255,255,0) 38%)}
 
+.vertical{position:absolute;inset:0;z-index:3}
+.vbank{position:absolute;left:0;top:0;bottom:0;width:calc(8% + var(--traverse,.62) * 92%);overflow:hidden;box-shadow:2px 0 14px rgba(0,0,0,.28);background-image:repeating-linear-gradient(90deg,rgba(var(--rgb),1) 0,rgba(var(--rgb),1) calc(16px * (1 - var(--vtilt,.55))),transparent calc(16px * (1 - var(--vtilt,.55))),transparent 16px);background-size:16px 100%}
+.vedge{position:absolute;right:0;top:0;bottom:0;width:14px;cursor:grab;touch-action:none}
+.vedge::before{content:"";position:absolute;inset:0 -16px}
+.vedge::after{content:"";position:absolute;top:50%;left:50%;width:3px;height:40px;translate:-50% -50%;border-radius:3px;background:rgba(255,255,255,.55)}
+.vedge:active{cursor:grabbing}
+.vedge:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+
 .cloth{position:absolute;inset:0}
 .cloth[data-type="sunscreen"]{background:rgba(var(--rgb),var(--cloth-a,.6));backdrop-filter:blur(var(--cloth-blur,1.6px)) saturate(.9);-webkit-backdrop-filter:blur(var(--cloth-blur,1.6px)) saturate(.9)}
 .cloth[data-type="blackout"]{background:linear-gradient(90deg,rgba(0,0,0,.14),transparent 14%,transparent 86%,rgba(0,0,0,.14)),rgb(var(--rgb))}
@@ -386,6 +394,11 @@ button,input,select,textarea{font:inherit;color:inherit}
               <div class="cloth" data-type="sunscreen"></div>
               <div class="rail" tabindex="0" role="slider" aria-orientation="vertical" aria-label="Altura de la cortina" aria-valuemin="10" aria-valuemax="100" aria-valuenow="100"></div>
             </div>
+            <div class="vertical" hidden>
+              <div class="vbank">
+                <div class="vedge" tabindex="0" role="slider" aria-orientation="horizontal" aria-label="Posición de las láminas verticales" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62"></div>
+              </div>
+            </div>
             <div class="cassette"></div>
             <div class="gloss"></div>
           </div>
@@ -393,11 +406,12 @@ button,input,select,textarea{font:inherit;color:inherit}
 
         <div class="studio">
           <fieldset>
-            <legend>Tela</legend>
+            <legend>Tipo de cortina</legend>
             <div class="studio__row">
               <label class="chip"><input type="radio" name="tela" value="sunscreen" checked><span>Sunscreen</span></label>
               <label class="chip"><input type="radio" name="tela" value="duo"><span>Duo</span></label>
               <label class="chip"><input type="radio" name="tela" value="blackout"><span>Blackout</span></label>
+              <label class="chip"><input type="radio" name="tela" value="vertical"><span>Vertical</span></label>
             </div>
           </fieldset>
           <fieldset>
@@ -424,8 +438,16 @@ button,input,select,textarea{font:inherit;color:inherit}
               <label class="chip"><input type="radio" name="franjas" value="privacidad"><span>Cerradas</span></label>
             </div>
           </fieldset>
+          <fieldset id="tiltSet" hidden>
+            <legend>Giro de láminas</legend>
+            <div class="studio__row">
+              <label class="chip"><input type="radio" name="giro" value="0"><span>Cerradas</span></label>
+              <label class="chip"><input type="radio" name="giro" value="45" checked><span>Entreabiertas</span></label>
+              <label class="chip"><input type="radio" name="giro" value="90"><span>Abiertas</span></label>
+            </div>
+          </fieldset>
           <p class="studio__note" id="sceneNote" aria-live="polite"></p>
-          <p class="studio__hint">Arrastra la barra dorada para subir o bajar la cortina. Los colores son referenciales.</p>
+          <p class="studio__hint">Arrastra, desliza o usa la rueda del mouse sobre la ventana para mover la cortina. Los colores son referenciales.</p>
         </div>
       </div>
     </div>
@@ -803,10 +825,14 @@ button,input,select,textarea{font:inherit;color:inherit}
   const scene = document.getElementById("scene");
   const win = scene.querySelector(".window");
   const cloth = scene.querySelector(".cloth");
+  const shadeEl = scene.querySelector(".shade");
   const rail = scene.querySelector(".rail");
+  const verticalEl = scene.querySelector(".vertical");
+  const vedge = scene.querySelector(".vedge");
   const note = document.getElementById("sceneNote");
   const duoSet = document.getElementById("duoSet");
   const openSet = document.getElementById("openSet");
+  const tiltSet = document.getElementById("tiltSet");
 
   const COLORS = { marfil: "233,226,211", arena: "205,187,155", grafito: "60,64,72", noche: "35,44,110" };
   const SUNSCREEN_TRANS = { 1: 0.16, 5: 0.34, 10: 0.52 };
@@ -821,60 +847,93 @@ button,input,select,textarea{font:inherit;color:inherit}
     5: { alpha: 0.6, blur: 1.6 },
     10: { alpha: 0.42, blur: 0.7 }
   };
+  const TILT = { 0: 0, 45: 0.55, 90: 0.9 };
+  const TILT_LABEL = { 0: "cerradas", 45: "entreabiertas", 90: "abiertas" };
   const NOTES = {
     sunscreen: (ap) => "Sunscreen con apertura de tela " + ap + "% filtra la luz, reduce el deslumbramiento y mantiene la vista hacia el exterior.",
     "duo-luz": (ap) => "Duo con las franjas abiertas y apertura de tela " + ap + "%: entra luz suave y sigues viendo hacia afuera.",
     "duo-privacidad": () => "Duo con las franjas cerradas: la tela cubre todo el vano y te da privacidad.",
-    blackout: () => "Blackout bloquea el paso de la luz y deja el ambiente en penumbra."
+    blackout: () => "Blackout bloquea el paso de la luz y deja el ambiente en penumbra.",
+    vertical: () => {
+      const pct = Math.round(state.traverse * 100);
+      if (pct < 10) return "Láminas verticales recogidas a un costado: la ventana queda completamente despejada.";
+      return "Láminas corridas al " + pct + "% del vano, " + TILT_LABEL[state.giro] + " a " + state.giro + "°.";
+    }
   };
   const MIN_DROP = 0.1;
-  const state = { fabric: "sunscreen", color: "marfil", duo: "luz", apertura: "5", drop: 1 };
+  const MIN_TRAVERSE = 0;
+  const state = { fabric: "sunscreen", color: "marfil", duo: "luz", apertura: "5", giro: "45", drop: 1, traverse: 0.62 };
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
   const render = () => {
+    const isVertical = state.fabric === "vertical";
     const key = state.fabric === "duo" ? "duo-" + state.duo : state.fabric;
-    const base = TRANS[key];
-    const trans = typeof base === "object" ? base[state.apertura] : base;
-    const light = (1 - state.drop) + state.drop * trans;
-    const pct = Math.round(state.drop * 100);
-    const open = OPEN[state.apertura];
-    scene.style.setProperty("--drop", state.drop.toFixed(3));
+    let light;
+    if (isVertical) {
+      const vtilt = TILT[state.giro];
+      light = 1 - state.traverse * (1 - vtilt);
+      scene.style.setProperty("--traverse", state.traverse.toFixed(3));
+      scene.style.setProperty("--vtilt", vtilt.toFixed(3));
+    } else {
+      const base = TRANS[key];
+      const trans = typeof base === "object" ? base[state.apertura] : base;
+      light = (1 - state.drop) + state.drop * trans;
+      const open = OPEN[state.apertura];
+      scene.style.setProperty("--drop", state.drop.toFixed(3));
+      scene.style.setProperty("--cloth-a", open.alpha);
+      scene.style.setProperty("--cloth-blur", open.blur + "px");
+      scene.style.setProperty("--duo-sheer-a", open.alpha);
+    }
     scene.style.setProperty("--light", light.toFixed(3));
     scene.style.setProperty("--rgb", COLORS[state.color]);
-    scene.style.setProperty("--cloth-a", open.alpha);
-    scene.style.setProperty("--cloth-blur", open.blur + "px");
-    scene.style.setProperty("--duo-sheer-a", open.alpha);
     cloth.dataset.type = state.fabric;
     cloth.style.setProperty("--shift", state.duo === "privacidad" ? "var(--band)" : "0px");
+
+    shadeEl.hidden = isVertical;
+    verticalEl.hidden = !isVertical;
     duoSet.hidden = state.fabric !== "duo";
-    openSet.hidden = state.fabric === "blackout";
+    openSet.hidden = state.fabric === "blackout" || isVertical;
+    tiltSet.hidden = !isVertical;
+
     note.textContent = NOTES[key](state.apertura);
-    rail.setAttribute("aria-valuenow", String(pct));
-    rail.setAttribute("aria-valuetext", "Cortina bajada al " + pct + "%");
+
+    if (isVertical) {
+      const pct = Math.round(state.traverse * 100);
+      vedge.setAttribute("aria-valuenow", String(pct));
+      vedge.setAttribute("aria-valuetext", "Láminas corridas al " + pct + "%");
+    } else {
+      const pct = Math.round(state.drop * 100);
+      rail.setAttribute("aria-valuenow", String(pct));
+      rail.setAttribute("aria-valuetext", "Cortina bajada al " + pct + "%");
+    }
   };
 
   const setDrop = (v) => {
     state.drop = clamp(v, MIN_DROP, 1);
     render();
   };
+  const setTraverse = (v) => {
+    state.traverse = clamp(v, MIN_TRAVERSE, 1);
+    render();
+  };
 
   let raf = 0;
-  const tween = (to, ms) => {
+  const animateTo = (from, to, ms, setter) => {
     cancelAnimationFrame(raf);
-    to = clamp(to, MIN_DROP, 1);
-    if (reduceMotion) { setDrop(to); return; }
-    const from = state.drop;
+    if (reduceMotion) { setter(to); return; }
     const start = performance.now();
     scene.classList.add("is-moving");
     const step = (now) => {
       const p = Math.min(1, (now - start) / ms);
       const eased = 1 - Math.pow(1 - p, 3);
-      setDrop(from + (to - from) * eased);
+      setter(from + (to - from) * eased);
       if (p < 1) raf = requestAnimationFrame(step);
       else scene.classList.remove("is-moving");
     };
     raf = requestAnimationFrame(step);
   };
+  const tween = (to, ms) => animateTo(state.drop, clamp(to, MIN_DROP, 1), ms, setDrop);
+  const tweenTraverse = (to, ms) => animateTo(state.traverse, clamp(to, MIN_TRAVERSE, 1), ms, setTraverse);
 
   scene.querySelector(".studio").addEventListener("change", (e) => {
     const { name, value } = e.target;
@@ -882,18 +941,24 @@ button,input,select,textarea{font:inherit;color:inherit}
     if (name === "color") state.color = value;
     if (name === "franjas") state.duo = value;
     if (name === "apertura") state.apertura = value;
+    if (name === "giro") state.giro = value;
     render();
   });
 
   let drag = null;
   win.addEventListener("pointerdown", (e) => {
     cancelAnimationFrame(raf);
-    drag = { y: e.clientY, drop: state.drop, h: win.clientHeight };
+    drag = state.fabric === "vertical"
+      ? { axis: "x", pos: e.clientX, value: state.traverse, size: win.clientWidth }
+      : { axis: "y", pos: e.clientY, value: state.drop, size: win.clientHeight };
     win.setPointerCapture(e.pointerId);
     scene.classList.add("is-moving");
   });
   win.addEventListener("pointermove", (e) => {
-    if (drag) setDrop(drag.drop + (e.clientY - drag.y) / drag.h);
+    if (!drag) return;
+    const pos = drag.axis === "x" ? e.clientX : e.clientY;
+    const next = drag.value + (pos - drag.pos) / drag.size;
+    if (drag.axis === "x") setTraverse(next); else setDrop(next);
   });
   const endDrag = () => {
     drag = null;
@@ -909,16 +974,33 @@ button,input,select,textarea{font:inherit;color:inherit}
     if (e.key === "End") { e.preventDefault(); setDrop(1); }
   });
 
+  vedge.addEventListener("keydown", (e) => {
+    const steps = { ArrowLeft: -0.05, ArrowUp: -0.05, ArrowRight: 0.05, ArrowDown: 0.05, PageUp: -0.2, PageDown: 0.2 };
+    if (e.key in steps) { e.preventDefault(); setTraverse(state.traverse + steps[e.key]); }
+    if (e.key === "Home") { e.preventDefault(); setTraverse(MIN_TRAVERSE); }
+    if (e.key === "End") { e.preventDefault(); setTraverse(1); }
+  });
+
   win.addEventListener("click", (e) => {
     const r = win.getBoundingClientRect();
-    tween((e.clientY - r.top - win.clientTop) / win.clientHeight, 500);
+    if (state.fabric === "vertical") {
+      tweenTraverse((e.clientX - r.left - win.clientLeft) / win.clientWidth, 500);
+    } else {
+      tween((e.clientY - r.top - win.clientTop) / win.clientHeight, 500);
+    }
   });
 
   const WHEEL_STEP = 0.07;
   win.addEventListener("wheel", (e) => {
     e.preventDefault();
-    if (!e.deltaY) return;
-    tween(state.drop + Math.sign(e.deltaY) * WHEEL_STEP, 220);
+    if (state.fabric === "vertical") {
+      const delta = e.deltaX || e.deltaY;
+      if (!delta) return;
+      tweenTraverse(state.traverse + Math.sign(delta) * WHEEL_STEP, 220);
+    } else {
+      if (!e.deltaY) return;
+      tween(state.drop + Math.sign(e.deltaY) * WHEEL_STEP, 220);
+    }
   }, { passive: false });
 
   render();
