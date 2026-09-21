@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MZRoller | Cortinas roller y persianas de exterior en La Serena</title>
+<meta name="description" content="Fábrica de cortinas roller Duo, Blackout y Sunscreen y persianas de exterior en La Serena. Confección e instalación, servicio técnico y transformaciones.">
+<meta name="theme-color" content="#161e63">
+<meta property="og:title" content="MZRoller | Cortinas roller y persianas de exterior en La Serena">
+<meta property="og:description" content="Fábrica de cortinas roller Duo, Blackout y Sunscreen y persianas de exterior. Confección e instalación en La Serena.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mzroller.cl/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mzroller.cl/favicon-16.png">
+<link rel="shortcut icon" href="https://mzroller.cl/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cortinas Roller La Serena MZRoller">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Hanken+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<style>
+@property --light{syntax:"<number>";inherits:true;initial-value:1}
+
+:root{
+  --noche:#0d1240;
+  --anil:#161e63;
+  --niebla:#eceef4;
+  --tiza:#fafaf8;
+  --laton:#b8985a;
+  --laton-claro:#dcc794;
+  --laton-osc:#8a6d34;
+  --tinta:#1a1f45;
+  --suave:#4a4f75;
+  --serif:"Bodoni Moda","Bodoni 72",Didot,Georgia,serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --gutter:clamp(20px,5vw,56px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.6;color:var(--tinta);background:var(--tiza);-webkit-font-smoothing:antialiased}
+svg{display:block;max-width:100%}
+h1,h2,h3,p,dl,dd,ul,ol{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--laton);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-64px;z-index:100;background:var(--laton);color:var(--noche);padding:10px 16px;border-radius:4px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{width:min(1180px,calc(100% - 2 * var(--gutter)));margin-inline:auto}
+
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.08;letter-spacing:-.015em}
+.section{padding-block:clamp(72px,10vw,136px)}
+.s-niebla{background:var(--niebla);--suave:#4a4f75}
+.s-tiza{background:var(--tiza);--suave:#4a4f75}
+.s-anil{background:var(--anil);color:var(--niebla);--suave:rgba(236,238,244,.8)}
+.s-noche{background:var(--noche);color:var(--niebla);--suave:rgba(236,238,244,.8);color-scheme:dark}
+.s-niebla .h2,.s-tiza .h2{color:var(--anil)}
+.s-anil .h2,.s-noche .h2{color:#fff}
+.head{max-width:44rem;margin-bottom:clamp(32px,5vw,64px)}
+.head p{margin-top:18px;max-width:38rem;color:var(--suave)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 28px;border-radius:999px;border:1px solid transparent;font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn--primary{background:var(--laton);color:var(--noche)}
+.btn--primary:hover{background:var(--laton-claro)}
+.btn--ghost{border-color:rgba(236,238,244,.42);color:var(--niebla);background:transparent}
+.btn--ghost:hover{border-color:var(--niebla)}
+.btn--dark{background:var(--anil);color:#fff}
+.btn--dark:hover{background:var(--noche)}
+.btn--small{min-height:42px;padding:0 22px;font-size:.95rem}
+
+.top{position:fixed;inset:0 0 auto 0;z-index:50;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.top.is-solid,.top.is-open{background:rgba(13,18,64,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:rgba(184,152,90,.28)}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand__name{display:block;font-family:var(--serif);font-size:1.6rem;font-weight:600;line-height:1;letter-spacing:.01em}
+.brand__place{display:block;margin-top:5px;font-size:.78rem;line-height:1;letter-spacing:.08em;color:var(--laton-claro)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a:not(.btn){padding:6px 0;border-bottom:1px solid transparent;color:var(--niebla);font-size:.97rem;text-decoration:none;transition:border-color .2s}
+.nav a:not(.btn):hover{border-color:var(--laton)}
+.menu-btn{display:none;width:46px;height:46px;border:1px solid rgba(236,238,244,.35);border-radius:50%;background:transparent;cursor:pointer;align-items:center;justify-content:center}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:18px;height:1.5px;background:#fff;content:"";position:relative}
+.menu-btn span::before{position:absolute;top:-6px}
+.menu-btn span::after{position:absolute;top:6px}
+
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 72px;background:radial-gradient(70% 60% at 82% 38%,rgba(246,210,154,.17),transparent 65%),var(--noche);color:var(--niebla)}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,6vw,96px);align-items:center}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,6.4vw,5.6rem);line-height:1;letter-spacing:-.02em;color:#fff}
+.hero__lead{margin-top:28px;max-width:32rem;font-size:1.15rem;color:rgba(236,238,244,.84)}
+.hero__cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px}
+
+.scene{--rgb:233,226,211;--drop:1;--light:.4;position:relative;width:min(100%,440px);margin-inline:auto;transition:--light .45s ease}
+.scene.is-moving{transition:none}
+.room{position:relative;aspect-ratio:4/5;overflow:hidden;isolation:isolate;background:linear-gradient(#1b2378,#121760);box-shadow:0 50px 90px -30px rgba(0,0,0,.65)}
+.room::after{content:"";position:absolute;inset:0;z-index:1;background:#04061f;opacity:calc((1 - var(--light)) * .55);pointer-events:none}
+.floor{position:absolute;inset:auto 0 0 0;height:19%;background:linear-gradient(#0a0e33,#060826)}
+.beam{position:absolute;z-index:2;left:20%;width:60%;bottom:0;height:19%;background:linear-gradient(rgba(246,210,154,.6),rgba(246,210,154,.1));clip-path:polygon(8% 0,92% 0,100% 100%,0 100%);opacity:var(--light)}
+.sill{position:absolute;z-index:3;left:11%;right:11%;top:65%;height:1.6%;background:#f4f0e6}
+.window{--band:11px;position:absolute;z-index:3;left:14%;right:14%;top:8%;height:57%;overflow:hidden;border:clamp(5px,1.3vw,9px) solid #ebe6d9;background:#ebe6d9;box-shadow:0 0 calc(var(--light) * 90px) rgba(246,210,154,calc(var(--light) * .4))}
+.view{position:absolute;inset:0}
+.view svg{width:100%;height:100%}
+.mullion{position:absolute;left:50%;top:0;bottom:0;width:6px;transform:translateX(-50%);background:#ebe6d9}
+.shade{position:absolute;left:0;right:0;top:0;height:calc(var(--drop) * 100%);z-index:3}
+.cassette{position:absolute;left:0;right:0;top:0;height:16px;z-index:5;background:linear-gradient(#e7d3a6,#a88a4e 55%,#7d6435);box-shadow:0 4px 8px rgba(0,0,0,.35)}
+.rail{position:absolute;left:0;right:0;bottom:0;height:12px;z-index:4;cursor:grab;touch-action:none;background:linear-gradient(#e7d3a6,#a88a4e 60%,#7d6435);box-shadow:0 6px 12px rgba(0,0,0,.35)}
+.rail::before{content:"";position:absolute;inset:-16px 0}
+.rail::after{content:"";position:absolute;left:50%;top:50%;width:44px;height:3px;translate:-50% -50%;border-radius:3px;background:rgba(13,18,64,.6)}
+.rail:active{cursor:grabbing}
+.rail:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+.gloss{position:absolute;inset:0;z-index:6;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.16),rgba(255,255,255,0) 38%)}
+
+.cloth{position:absolute;inset:0}
+.cloth[data-type="sunscreen"]{background:rgba(var(--rgb),.6);backdrop-filter:blur(1.6px) saturate(.9);-webkit-backdrop-filter:blur(1.6px) saturate(.9)}
+.cloth[data-type="blackout"]{background:linear-gradient(90deg,rgba(0,0,0,.14),transparent 14%,transparent 86%,rgba(0,0,0,.14)),rgb(var(--rgb))}
+.cloth[data-type="sunscreen"]::before,.cloth[data-type="blackout"]::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.1) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,rgba(0,0,0,.09) 0 1px,transparent 1px 3px)}
+.cloth[data-type="duo"]::before,.cloth[data-type="duo"]::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(var(--rgb),.97) 50%,rgba(var(--rgb),.16) 50%);background-size:100% calc(var(--band,11px) * 2)}
+.cloth[data-type="duo"]::after{background-position:0 var(--shift,0px);transition:background-position .55s cubic-bezier(.6,0,.2,1)}
+
+.studio{margin-top:28px;display:grid;gap:16px}
+.studio fieldset{border:0;padding:0;margin:0;min-width:0}
+.studio legend{padding:0;margin-bottom:8px;font-size:.88rem;color:rgba(236,238,244,.72)}
+.studio__row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+.studio__note{min-height:3.4em;font-size:.97rem;color:rgba(236,238,244,.9)}
+.studio__hint{font-size:.85rem;color:rgba(236,238,244,.62)}
+.chip{position:relative}
+.chip input,.sw input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.chip span{display:block;padding:10px 18px;border:1px solid rgba(236,238,244,.3);border-radius:999px;font-size:.95rem;color:var(--niebla);transition:background .2s,color .2s,border-color .2s}
+.chip input:checked + span{background:var(--laton);border-color:var(--laton);color:var(--noche);font-weight:600}
+.chip input:focus-visible + span,.sw input:focus-visible + span{outline:2px solid #fff;outline-offset:3px}
+.sw{position:relative;display:block;width:32px;height:32px}
+.sw span:not(.sr){display:block;width:100%;height:100%;border-radius:50%;background:var(--sw);border:1px solid rgba(255,255,255,.4)}
+.sw input:checked + span{box-shadow:0 0 0 2px var(--noche),0 0 0 4px var(--laton)}
+
+.tela{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,6vw,96px);align-items:center;padding-block:clamp(32px,5vw,60px);border-top:1px solid rgba(22,30,99,.16)}
+.tela:nth-of-type(even) .sample{order:2}
+.tela h3{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,3.6vw,2.9rem);line-height:1.1;letter-spacing:-.01em;color:var(--anil)}
+.tela__lead{margin-top:14px;font-size:1.2rem;color:var(--tinta)}
+.tela__text{margin-top:10px;max-width:34rem;color:var(--suave)}
+.tela dl{margin-top:26px;padding-top:20px;display:grid;grid-template-columns:8.5rem 1fr;gap:12px 20px;border-top:1px solid rgba(22,30,99,.16)}
+.tela dt{font-weight:600;color:var(--anil)}
+.tela dd{color:var(--suave)}
+.sample{--band:10px;position:relative;aspect-ratio:5/4;overflow:hidden;background:#ebe6d9;border:8px solid #ebe6d9;box-shadow:0 30px 60px -28px rgba(13,18,64,.5)}
+.sample--sunscreen{--rgb:233,226,211}
+.sample--duo{--rgb:205,187,155}
+.sample--blackout{--rgb:60,64,72}
+.sample__view{position:absolute;inset:0}
+.sample__view svg{width:100%;height:100%}
+.sample__shade{position:absolute;left:0;right:0;top:0;height:78%}
+.sample__shade::after{content:"";position:absolute;left:0;right:0;bottom:0;height:9px;background:linear-gradient(#e7d3a6,#a88a4e 60%,#7d6435);box-shadow:0 5px 10px rgba(0,0,0,.3)}
+.sample .cassette{height:12px}
+
+.ext{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,6vw,96px);align-items:center}
+.ext p{margin-top:20px;max-width:34rem;color:var(--suave)}
+.ext ul{list-style:none;padding:0;margin:32px 0 36px}
+.ext li{position:relative;padding:16px 0 16px 34px;border-top:1px solid rgba(236,238,244,.2)}
+.ext li:last-child{border-bottom:1px solid rgba(236,238,244,.2)}
+.ext li::before{content:"";position:absolute;left:0;top:28px;width:18px;height:1px;background:var(--laton)}
+.ext__fig{padding:clamp(12px,2vw,24px);background:rgba(255,255,255,.04);border:1px solid rgba(236,238,244,.16)}
+.diagram{width:100%;height:auto}
+.diagram text{font-family:var(--sans);font-size:14px;fill:#eceef4}
+
+.serv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,48px)}
+.serv article{padding-top:22px;border-top:2px solid var(--laton-osc)}
+.serv h3{font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.15;color:var(--anil)}
+.serv p{margin-top:12px;color:var(--suave)}
+
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,48px);counter-reset:paso}
+.steps li{position:relative;padding-top:68px}
+.steps li::before{counter-increment:paso;content:counter(paso);position:absolute;top:0;left:0;font-family:var(--serif);font-size:3.4rem;line-height:1;color:var(--laton-osc)}
+.steps li:not(:last-child)::after{content:"";position:absolute;top:30px;left:56px;right:-24px;height:1px;background:rgba(22,30,99,.24)}
+.steps h3{font-family:var(--serif);font-weight:500;font-size:1.4rem;line-height:1.2;color:var(--anil)}
+.steps p{margin-top:10px;color:var(--suave)}
+
+.contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.contact__intro p{margin-top:20px;max-width:30rem;color:var(--suave)}
+.contact__list{margin-top:32px;display:grid;grid-template-columns:auto 1fr;gap:10px 24px}
+.contact__list dt{color:rgba(236,238,244,.7)}
+.contact__list a{color:#fff}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:grid;gap:8px}
+.field--full{grid-column:1/-1}
+.field label{font-size:.92rem;color:rgba(236,238,244,.82)}
+.field input,.field select,.field textarea{width:100%;padding:14px 16px;border:1px solid rgba(236,238,244,.26);border-radius:4px;background:rgba(255,255,255,.06);color:#fff}
+.field textarea{resize:vertical;min-height:120px}
+.field input::placeholder,.field textarea::placeholder{color:rgba(236,238,244,.45)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--laton);outline-offset:1px;border-color:var(--laton)}
+.form__actions{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.form__note{font-size:.9rem;color:rgba(236,238,244,.68)}
+.form__msg{grid-column:1/-1;min-height:1.4em;color:var(--laton-claro);font-size:.95rem}
+
+.foot{padding:48px 0 104px;background:#080b2b;color:rgba(236,238,244,.72);font-size:.95rem}
+.foot a{color:#fff}
+.foot__in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+
+.gal__bar{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 24px;margin-bottom:28px}
+.gal__filter{display:grid;gap:8px}
+.gal__filter label{font-size:.9rem;color:rgba(236,238,244,.72)}
+.gal__filter select{min-width:min(100%,300px);padding:12px 14px;border:1px solid rgba(236,238,244,.28);border-radius:4px;background:rgba(255,255,255,.06);color:#fff}
+.gal__filter select:focus{outline:2px solid var(--laton);outline-offset:1px;border-color:var(--laton)}
+.gal__count{font-size:.92rem;color:rgba(236,238,244,.7)}
+.gal__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.tile{position:relative;aspect-ratio:1;padding:0;border:0;overflow:hidden;background:#1a2170;cursor:zoom-in}
+.tile img{display:block;width:100%;height:100%;object-fit:cover}
+.tile__cap{position:absolute;inset:auto 0 0 0;padding:32px 12px 10px;text-align:left;font-size:.85rem;line-height:1.3;color:#fff;background:linear-gradient(transparent,rgba(8,11,43,.88))}
+.gal__more{margin-top:36px;text-align:center}
+
+.lb{width:min(1100px,94vw);max-height:96svh;margin:auto;padding:16px;border:0;background:transparent;color:#fff}
+.lb::backdrop{background:rgba(5,7,30,.93)}
+.lb__close{display:block;margin:0 0 12px auto}
+.lb__fig{margin:0;display:grid;justify-items:center;gap:12px}
+.lb__img{max-width:100%;max-height:68svh;object-fit:contain;background:#0d1240}
+.lb__cap{font-family:var(--serif);font-size:1.35rem;text-align:center}
+.lb__bar{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:20px}
+.lb__btn{min-height:44px;padding:0 22px;border:1px solid rgba(236,238,244,.4);border-radius:999px;background:transparent;color:#fff;cursor:pointer;transition:border-color .2s}
+.lb__btn:hover{border-color:#fff}
+.lb__pos{min-width:5.5rem;text-align:center;font-size:.95rem;color:rgba(236,238,244,.75)}
+
+.stars{display:inline-flex;gap:2px;color:var(--laton-osc)}
+.stars svg{width:18px;height:18px;fill:currentColor}
+.quote-main{margin:0 0 clamp(40px,6vw,72px);max-width:58rem}
+.quote-main blockquote{margin:0;font-family:var(--serif);font-size:clamp(1.4rem,2.7vw,2.1rem);line-height:1.35;color:var(--anil)}
+.quote-by{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-weight:600}
+.quote-main .stars svg{width:22px;height:22px}
+.rev{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(24px,4vw,56px)}
+.rev figure{margin:0;padding:26px 0 30px;border-top:1px solid rgba(22,30,99,.18)}
+.rev figcaption{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;font-weight:600}
+.rev blockquote{margin:14px 0 0;color:var(--suave)}
+.rev__cta{margin-top:36px}
+
+.logos{display:grid;gap:clamp(20px,3vw,36px);padding:clamp(24px,4vw,48px);background:#80848f}
+.logos__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(16px,3vw,40px)}
+.logo{display:flex;align-items:center;justify-content:center}
+.logo img{max-width:100%;max-height:100%;object-fit:contain}
+.logo--wide{width:min(270px,44%);aspect-ratio:27/11}
+.logo--sq{width:min(150px,30%);aspect-ratio:1}
+
+.contact__cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.map{margin-top:clamp(40px,6vw,72px)}
+.map iframe{display:block;width:100%;height:clamp(300px,45vw,440px);border:0;background:#1a2170}
+
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:60;display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px 0 18px;border:1px solid rgba(69,243,134,.55);border-radius:999px;background:var(--anil);color:#fff;font-weight:600;text-decoration:none;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.fab::before{content:"";width:10px;height:10px;border-radius:50%;background:#45f386}
+
+@media (max-width:1140px){
+  .menu-btn{display:inline-flex}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px var(--gutter) 28px;background:var(--noche);border-bottom:1px solid rgba(184,152,90,.28)}
+  .nav.is-open{display:flex}
+  .nav a:not(.btn){padding:16px 0;border-bottom:1px solid rgba(236,238,244,.12)}
+  .nav .btn{margin-top:20px}
+}
+@media (max-width:1000px){
+  .hero__grid,.ext,.contact,.tela{grid-template-columns:minmax(0,1fr)}
+  .tela:nth-of-type(even) .sample{order:0}
+  .serv,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps li::after{display:none}
+  .gal__grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rev{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  .serv,.steps,.form,.rev{grid-template-columns:minmax(0,1fr)}
+  .gal__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .tela dl{grid-template-columns:1fr;gap:2px}
+  .tela dd{margin-bottom:12px}
+  .hero{padding-top:104px}
+  .fab{min-height:48px;padding:0 18px 0 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Cortinas Roller La Serena MZRoller","url":"https://mzroller.cl","telephone":"+56983655707","description":"Fábrica de cortinas roller Duo, Blackout y Sunscreen y persianas de exterior en La Serena. Confección e instalación, servicio técnico y transformaciones.","address":{"@type":"PostalAddress","streetAddress":"Guillermo Ulriksen 1627","addressLocality":"La Serena","addressRegion":"Coquimbo","addressCountry":"CL"},"areaServed":"La Serena","sameAs":["https://www.facebook.com/cortinasroller.laserena.3"]}
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b4a8f"/>
+      <stop offset=".55" stop-color="#86a9da"/>
+      <stop offset="1" stop-color="#f6d29a"/>
+    </linearGradient>
+    <radialGradient id="g-sol">
+      <stop offset="0" stop-color="#fff1c9" stop-opacity=".95"/>
+      <stop offset=".4" stop-color="#f6d29a" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#f6d29a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g-mar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a6f9f"/>
+      <stop offset="1" stop-color="#12345c"/>
+    </linearGradient>
+  </defs>
+  <symbol id="vista" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+    <rect width="400" height="400" fill="url(#g-cielo)"/>
+    <circle cx="255" cy="238" r="130" fill="url(#g-sol)"/>
+    <circle cx="255" cy="238" r="22" fill="#fff6da"/>
+    <rect y="252" width="400" height="148" fill="url(#g-mar)"/>
+    <path d="M400 252V212C372 208 342 222 312 240L292 252Z" fill="#0f2c52"/>
+    <path d="M0 252V232C30 226 62 232 92 244L104 252Z" fill="#12335c"/>
+    <g fill="#ffe8aa" opacity=".65">
+      <rect x="228" y="256" width="54" height="3" rx="1.5"/>
+      <rect x="236" y="266" width="40" height="3" rx="1.5"/>
+      <rect x="222" y="278" width="66" height="3" rx="1.5"/>
+      <rect x="240" y="292" width="32" height="3" rx="1.5"/>
+      <rect x="230" y="308" width="52" height="3" rx="1.5"/>
+      <rect x="244" y="326" width="26" height="3" rx="1.5"/>
+    </g>
+  </symbol>
+  <symbol id="estrella" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></symbol>
+</svg>
+
+<a class="skip" href="#telas">Ir al contenido</a>
+
+<header class="top" id="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#inicio" aria-label="MZRoller, inicio">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="4" width="22" height="5" rx="2.5" fill="#b8985a"/><rect x="7" y="9" width="18" height="15" fill="#eceef4"/><rect x="6" y="24" width="20" height="3" rx="1.5" fill="#b8985a"/></svg>
+      <span><span class="brand__name">MZRoller</span><span class="brand__place">La Serena</span></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><span></span></button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#telas">Telas</a>
+      <a href="#exterior">Exterior</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn btn--primary btn--small" href="#contacto" data-wa="Hola, quiero cotizar cortinas roller.">Cotizar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero__grid">
+      <div>
+        <h1>La luz de tu casa, a tu medida</h1>
+        <p class="hero__lead">Fábrica de cortinas roller Duo, Blackout y Sunscreen, y de persianas de exterior. Confeccionamos e instalamos en La Serena.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#contacto" data-wa="Hola, quiero cotizar cortinas roller.">Cotizar por WhatsApp</a>
+          <a class="btn btn--ghost" href="#telas">Ver las telas</a>
+        </div>
+      </div>
+
+      <div class="scene" id="scene">
+        <div class="room">
+          <div class="floor"></div>
+          <div class="beam"></div>
+          <div class="sill"></div>
+          <div class="window">
+            <div class="view"><svg width="100%" height="100%" aria-hidden="true"><use href="#vista"/></svg></div>
+            <div class="mullion"></div>
+            <div class="shade">
+              <div class="cloth" data-type="sunscreen"></div>
+              <div class="rail" tabindex="0" role="slider" aria-orientation="vertical" aria-label="Altura de la cortina" aria-valuemin="10" aria-valuemax="100" aria-valuenow="100"></div>
+            </div>
+            <div class="cassette"></div>
+            <div class="gloss"></div>
+          </div>
+        </div>
+
+        <div class="studio">
+          <fieldset>
+            <legend>Tela</legend>
+            <div class="studio__row">
+              <label class="chip"><input type="radio" name="tela" value="sunscreen" checked><span>Sunscreen</span></label>
+              <label class="chip"><input type="radio" name="tela" value="duo"><span>Duo</span></label>
+              <label class="chip"><input type="radio" name="tela" value="blackout"><span>Blackout</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Color</legend>
+            <div class="studio__row">
+              <label class="sw" title="Marfil"><input type="radio" name="color" value="marfil" checked><span style="--sw:#e9e2d3"></span><span class="sr">Marfil</span></label>
+              <label class="sw" title="Arena"><input type="radio" name="color" value="arena"><span style="--sw:#cdbb9b"></span><span class="sr">Arena</span></label>
+              <label class="sw" title="Grafito"><input type="radio" name="color" value="grafito"><span style="--sw:#3c4048"></span><span class="sr">Grafito</span></label>
+              <label class="sw" title="Azul noche"><input type="radio" name="color" value="noche"><span style="--sw:#232c6e"></span><span class="sr">Azul noche</span></label>
+            </div>
+          </fieldset>
+          <fieldset id="duoSet" hidden>
+            <legend>Franjas</legend>
+            <div class="studio__row">
+              <label class="chip"><input type="radio" name="franjas" value="luz" checked><span>Abiertas</span></label>
+              <label class="chip"><input type="radio" name="franjas" value="privacidad"><span>Cerradas</span></label>
+            </div>
+          </fieldset>
+          <p class="studio__note" id="sceneNote" aria-live="polite"></p>
+          <p class="studio__hint">Arrastra la barra dorada para subir o bajar la cortina. Los colores son referenciales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section s-niebla" id="telas">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="h2">Tres telas para decidir cuánta luz entra</h2>
+        <p>Cada tela responde a una necesidad distinta. Elige según el ambiente y la hora del día.</p>
+      </div>
+
+      <div>
+        <article class="tela">
+          <div class="sample sample--sunscreen" aria-hidden="true">
+            <div class="sample__view"><svg width="100%" height="100%"><use href="#vista"/></svg></div>
+            <div class="sample__shade"><div class="cloth" data-type="sunscreen"></div></div>
+            <div class="cassette"></div>
+          </div>
+          <div>
+            <h3>Sunscreen</h3>
+            <p class="tela__lead">Luz suave y vista libre.</p>
+            <p class="tela__text">Una tela de trama fina que filtra el sol sin encerrar el ambiente. Reduce el brillo y el calor, y te deja ver hacia afuera.</p>
+            <dl>
+              <dt>Luz</dt><dd>Entra filtrada, sin reflejos molestos</dd>
+              <dt>Vista</dt><dd>Se mantiene hacia el exterior</dd>
+              <dt>Ideal para</dt><dd>Living, comedor, oficinas y espacios de trabajo</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="tela">
+          <div class="sample sample--duo" aria-hidden="true">
+            <div class="sample__view"><svg width="100%" height="100%"><use href="#vista"/></svg></div>
+            <div class="sample__shade"><div class="cloth" data-type="duo"></div></div>
+            <div class="cassette"></div>
+          </div>
+          <div>
+            <h3>Duo</h3>
+            <p class="tela__lead">Dos capas, luz a tu gusto.</p>
+            <p class="tela__text">Franjas alternadas de tela translúcida y tela opaca. Al desplazar las capas, abres o cierras el paso de la luz sin subir la cortina.</p>
+            <dl>
+              <dt>Luz</dt><dd>Regulable en cualquier momento del día</dd>
+              <dt>Vista</dt><dd>Visible con las franjas abiertas</dd>
+              <dt>Ideal para</dt><dd>Living, dormitorios y oficinas</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="tela">
+          <div class="sample sample--blackout" aria-hidden="true">
+            <div class="sample__view"><svg width="100%" height="100%"><use href="#vista"/></svg></div>
+            <div class="sample__shade"><div class="cloth" data-type="blackout"></div></div>
+            <div class="cassette"></div>
+          </div>
+          <div>
+            <h3>Blackout</h3>
+            <p class="tela__lead">Oscuridad cuando la necesitas.</p>
+            <p class="tela__text">Una tela opaca que detiene la luz y cuida tu descanso. Te da privacidad total, de día y de noche.</p>
+            <dl>
+              <dt>Luz</dt><dd>Bloquea el paso de la luz</dd>
+              <dt>Vista</dt><dd>Cubre por completo la ventana</dd>
+              <dt>Ideal para</dt><dd>Dormitorios y salas de televisión</dd>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section s-anil" id="exterior">
+    <div class="wrap ext">
+      <div>
+        <h2 class="h2">El sol se detiene afuera</h2>
+        <p>Las persianas de exterior cubren la ventana por fuera. El calor no alcanza a llegar al vidrio, y tu casa se mantiene más fresca y con la luz que tú decides.</p>
+        <ul>
+          <li>Reducen el calor que entra por las ventanas</li>
+          <li>Cuidan pisos, muebles y textiles del sol directo</li>
+          <li>Regulan la luz y la privacidad durante el día</li>
+        </ul>
+        <a class="btn btn--primary" href="#contacto" data-wa="Hola, quiero cotizar persianas de exterior.">Cotizar persianas de exterior</a>
+      </div>
+      <figure class="ext__fig" style="margin:0">
+        <svg class="diagram" viewBox="0 0 560 440" role="img" aria-label="Diagrama: los rayos del sol chocan con la persiana de exterior antes de llegar al vidrio y al interior de la casa">
+          <rect x="380" y="0" width="180" height="440" fill="#1c2580"/>
+          <rect x="340" y="0" width="40" height="110" fill="#2a3494"/>
+          <rect x="340" y="310" width="40" height="130" fill="#2a3494"/>
+          <rect x="356" y="110" width="8" height="200" fill="rgba(200,225,255,.4)" stroke="rgba(255,255,255,.55)"/>
+          <circle cx="64" cy="72" r="54" fill="#f6d29a" opacity=".16"/>
+          <circle cx="64" cy="72" r="26" fill="#f6d29a"/>
+          <g stroke="#f6d29a" stroke-width="2" stroke-linecap="round" opacity=".85">
+            <line x1="96" y1="90" x2="296" y2="128"/>
+            <line x1="92" y1="104" x2="296" y2="168"/>
+            <line x1="86" y1="118" x2="296" y2="208"/>
+            <line x1="80" y1="130" x2="296" y2="248"/>
+            <line x1="74" y1="140" x2="296" y2="288"/>
+          </g>
+          <rect x="294" y="98" width="34" height="14" rx="3" fill="#b8985a"/>
+          <g stroke="#b8985a" stroke-width="6" stroke-linecap="round">
+            <line x1="298" y1="124" x2="324" y2="132"/>
+            <line x1="298" y1="142" x2="324" y2="150"/>
+            <line x1="298" y1="160" x2="324" y2="168"/>
+            <line x1="298" y1="178" x2="324" y2="186"/>
+            <line x1="298" y1="196" x2="324" y2="204"/>
+            <line x1="298" y1="214" x2="324" y2="222"/>
+            <line x1="298" y1="232" x2="324" y2="240"/>
+            <line x1="298" y1="250" x2="324" y2="258"/>
+            <line x1="298" y1="268" x2="324" y2="276"/>
+            <line x1="298" y1="286" x2="324" y2="294"/>
+          </g>
+          <text x="40" y="192">Sol directo</text>
+          <text x="310" y="342" text-anchor="middle">Persiana de exterior</text>
+          <text x="360" y="90" text-anchor="middle">Vidrio</text>
+          <text x="150" y="410" text-anchor="middle">Exterior</text>
+          <text x="470" y="410" text-anchor="middle">Interior</text>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section s-tiza" id="servicios">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="h2">De la fábrica a tu ventana</h2>
+        <p>Nos encargamos de cada etapa para que tu cortina quede bien desde el primer día.</p>
+      </div>
+      <div class="serv">
+        <article>
+          <h3>Confección a medida</h3>
+          <p>Fabricamos cada cortina con las medidas exactas de tu ventana.</p>
+        </article>
+        <article>
+          <h3>Instalación</h3>
+          <p>Instalamos tu cortina y la dejamos funcionando en tu casa u oficina.</p>
+        </article>
+        <article>
+          <h3>Servicio técnico</h3>
+          <p>Revisamos y ajustamos cortinas roller que dejaron de funcionar bien.</p>
+        </article>
+        <article>
+          <h3>Transformaciones</h3>
+          <p>Cuéntanos qué tienes hoy en tus ventanas y vemos cómo transformarlo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section s-niebla" id="proceso">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="h2">Cómo trabajamos</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Cuéntanos qué necesitas</h3>
+          <p>Escríbenos por WhatsApp con el tipo de cortina y el espacio que quieres cubrir.</p>
+        </li>
+        <li>
+          <h3>Definimos medidas y tela</h3>
+          <p>Elegimos juntos la tela, el color y las medidas exactas de cada ventana.</p>
+        </li>
+        <li>
+          <h3>Confeccionamos</h3>
+          <p>Fabricamos tu cortina a medida en nuestra fábrica.</p>
+        </li>
+        <li>
+          <h3>Instalamos</h3>
+          <p>Dejamos la cortina instalada y funcionando donde la necesitas.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section s-noche" id="galeria">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="h2">Nuestros trabajos</h2>
+        <p>Un recorrido por proyectos donde instalamos nuestras cortinas. Filtra por proyecto o recorre todas las fotos.</p>
+      </div>
+      <div class="gal__bar">
+        <div class="gal__filter">
+          <label for="galFiltro">Proyecto</label>
+          <select id="galFiltro"><option value="">Todos los proyectos</option></select>
+        </div>
+        <p class="gal__count" id="galCount" aria-live="polite"></p>
+      </div>
+      <div class="gal__grid" id="galGrid"></div>
+      <div class="gal__more"><button class="btn btn--ghost" type="button" id="galMore">Ver más fotos</button></div>
+    </div>
+  </section>
+
+  <section class="section s-tiza" id="opiniones">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="h2">Lo que dicen quienes ya las instalaron</h2>
+        <p>Para nosotros, la confianza y la honestidad son parte del trabajo. Estas son algunas reseñas que nos dejaron en Google.</p>
+      </div>
+      <figure class="quote-main">
+        <blockquote>“Contacté a la empresa y fue fácil agendar visita para la instalación de cortinas roller dúo. Trabajo muy serio y prolijo, se cumplió con fecha y horario acordados. Lo recomiendo 100%. Excelente relación precio calidad y están informando constantemente del avance del trabajo.”</blockquote>
+        <figcaption class="quote-by"><span class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg></span><span>Barbara Inostroza</span></figcaption>
+      </figure>
+      <div class="rev">
+        <figure>
+          <figcaption><span class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg></span><span>Françoise O</span></figcaption>
+          <blockquote>“Excelente servicio, tomaron medidas un lunes y el viernes ya estaban instaladas, ademas se nota la buena calidad, hermosas y muy bien instaladas !”</blockquote>
+        </figure>
+        <figure>
+          <figcaption><span class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg></span><span>Sheyla Avalos</span></figcaption>
+          <blockquote>“Excelente servicio, cotice y en la misma semana ya tenia todo instalado, un cambio de imagen y cariñito para el hogar, se ve precioso, totalmente recomendable.”</blockquote>
+        </figure>
+        <figure>
+          <figcaption><span class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg></span><span>Yamilet Arias</span></figcaption>
+          <blockquote>“Muy buena atención, el producto maravilloso, quede encantada con las cortinas roler, muy buen servicio. RECOMENDADISIMO”</blockquote>
+        </figure>
+        <figure>
+          <figcaption><span class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg></span><span>KemiZaki</span></figcaption>
+          <blockquote>“Excelente atención al cliente y calidad de servicio. Me sorprendió la rapidez del trabajo. Quedé muy contenta con el resultado; las cortinas son hermosas, totalmente recomendado.”</blockquote>
+        </figure>
+        <figure>
+          <figcaption><span class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg></span><span>Maria Brito</span></figcaption>
+          <blockquote>“La instalación fue rápida, cumplen con lo programado...me encantó como quedaron mis cortinas.”</blockquote>
+        </figure>
+        <figure>
+          <figcaption><span class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg></span><span>Daniela Gonzalez</span></figcaption>
+          <blockquote>“Buen trabajo, dedicado en los detalle, preocupado del entorno. Totalmente recomendable.”</blockquote>
+        </figure>
+      </div>
+      <div class="rev__cta">
+        <a class="btn btn--dark" href="https://search.google.com/local/reviews?placeid=ChIJldG2z2_LkZYRD6VyYdHY2RA&amp;q=Cortinas+Roller+La+Serena+MZROLLER&amp;hl=es&amp;gl=419" target="_blank" rel="noopener">Ver todas las opiniones en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section s-niebla" id="clientes">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="h2">Instituciones y empresas que confían en nosotros</h2>
+      </div>
+      <div class="logos">
+        <div class="logos__row">
+        <div class="logo logo--wide"><img src="https://mzroller.cl/static/media/autoshopping_la_serena.2543e028.png" alt="Autoshopping La Serena" loading="lazy" decoding="async"></div>
+        <div class="logo logo--wide"><img src="https://mzroller.cl/static/media/salfa-logo-white.d1738834.svg" alt="Salfa" loading="lazy" decoding="async"></div>
+        <div class="logo logo--wide"><img src="https://mzroller.cl/static/media/constructora_ecomac.99264dad.svg" alt="Constructora Ecomac" loading="lazy" decoding="async"></div>
+        <div class="logo logo--wide"><img src="https://mzroller.cl/static/media/constructora_cadel.fd0e0727.png" alt="Constructora Cadel" loading="lazy" decoding="async"></div>
+        <div class="logo logo--wide"><img src="https://mzroller.cl/static/media/municipalidad_la_serena.7378834c.png" alt="Municipalidad de La Serena" loading="lazy" decoding="async"></div>
+        <div class="logo logo--wide"><img src="https://mzroller.cl/static/media/universidad_la_serena.dce4a888.png" alt="Universidad de La Serena" loading="lazy" decoding="async"></div>
+        <div class="logo logo--wide"><img src="https://mzroller.cl/static/media/universidad_aconcagua.9db204c6.png" alt="Universidad de Aconcagua" loading="lazy" decoding="async"></div>
+        <div class="logo logo--wide"><img src="https://mzroller.cl/static/media/universidad_santo_tomas.d8e8a0ca.png" alt="Universidad Santo Tomás" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="logos__row">
+        <div class="logo logo--sq"><img src="https://mzroller.cl/static/media/universidad_amazing_grace.f179e2a4.png" alt="Universidad Amazing Grace" loading="lazy" decoding="async"></div>
+        <div class="logo logo--sq"><img src="https://mzroller.cl/static/media/ministerio_educacion.c184ab43.png" alt="Ministerio de Educación" loading="lazy" decoding="async"></div>
+        <div class="logo logo--sq"><img src="https://mzroller.cl/static/media/ministerio_transporte.f4215d8f.png" alt="Ministerio de Transporte" loading="lazy" decoding="async"></div>
+        <div class="logo logo--sq"><img src="https://mzroller.cl/static/media/inmobiliaria_guzman.5894f2ff.jpg" alt="Inmobiliaria Guzmán" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section s-noche" id="contacto">
+    <div class="wrap contact">
+      <div class="contact__intro">
+        <h2 class="h2">Cotiza por WhatsApp</h2>
+        <p>Nuestras cotizaciones son exclusivamente por WhatsApp. Escríbenos o llámanos para resolver cualquier duda sobre tu cortina.</p>
+        <div class="contact__cta">
+          <a class="btn btn--primary" href="#contacto" data-wa="Hola, quiero cotizar cortinas roller.">Escribir por WhatsApp</a>
+          <a class="btn btn--ghost" href="tel:+56983655707">Llamar al +56 9 8365 5707</a>
+        </div>
+        <dl class="contact__list">
+          <dt>Dirección</dt><dd>Guillermo Ulriksen #1627, esquina Raúl Bitrán<br>La Serena, IV Región</dd>
+          <dt>Facebook</dt><dd><a href="https://www.facebook.com/cortinasroller.laserena.3" target="_blank" rel="noopener">Cortinas Roller La Serena</a></dd>
+        </dl>
+      </div>
+
+      <form class="form" id="form" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="tipo">¿Qué necesitas?</label>
+          <select id="tipo" name="tipo">
+            <option>Cortina roller Sunscreen</option>
+            <option>Cortina roller Duo</option>
+            <option>Cortina roller Blackout</option>
+            <option>Persianas de exterior</option>
+            <option>Servicio técnico</option>
+            <option>Transformaciones</option>
+            <option>Aún no lo sé</option>
+          </select>
+        </div>
+        <div class="field field--full">
+          <label for="detalle">Cuéntanos sobre tu ventana</label>
+          <textarea id="detalle" name="detalle" rows="4" placeholder="Medidas aproximadas, ambiente, colores que te gustan"></textarea>
+        </div>
+        <p class="form__msg" id="formMsg" role="alert"></p>
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit">Enviar por WhatsApp</button>
+          <p class="form__note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="wrap map">
+      <iframe title="Ubicación de MZRoller en Google Maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13832.347353956076!2d-71.2352222!3d-29.9194021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x10d9d8d16172a50f!2sCortinas%20Roller%20La%20Serena%20MZROLLER!5e0!3m2!1ses-419!2scl!4v1605751246564!5m2!1ses-419!2scl" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p>Fábrica de cortinas roller y persianas de exterior en La Serena.</p>
+    <p><a href="https://wa.me/56983655707" target="_blank" rel="noopener">WhatsApp +56 9 8365 5707</a> &nbsp;&nbsp; <a href="https://www.facebook.com/cortinasroller.laserena.3" target="_blank" rel="noopener">Facebook</a></p>
+    <p>&copy; <span id="year">2026</span> MZRoller</p>
+  </div>
+</footer>
+
+<a class="fab" href="#contacto" data-wa="Hola, quiero cotizar cortinas roller.">WhatsApp</a>
+
+<dialog class="lb" id="lb" aria-label="Foto ampliada">
+  <button class="lb__btn lb__close" type="button" id="lbClose">Cerrar</button>
+  <figure class="lb__fig">
+    <img class="lb__img" id="lbImg" alt="">
+    <figcaption class="lb__cap" id="lbCap"></figcaption>
+  </figure>
+  <div class="lb__bar">
+    <button class="lb__btn" type="button" id="lbPrev">Anterior</button>
+    <span class="lb__pos" id="lbPos"></span>
+    <button class="lb__btn" type="button" id="lbNext">Siguiente</button>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const CONFIG = { whatsapp: "56983655707" };
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const waLink = (text) => {
+    const digits = CONFIG.whatsapp.replace(/\D/g, "");
+    const base = digits ? "https://wa.me/" + digits : "https://wa.me/";
+    return base + "?text=" + encodeURIComponent(text);
+  };
+
+  document.querySelectorAll("[data-wa]").forEach((a) => {
+    a.href = waLink(a.dataset.wa);
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const top = document.getElementById("top");
+  const onScroll = () => top.classList.toggle("is-solid", scrollY > 24);
+  onScroll();
+  addEventListener("scroll", onScroll, { passive: true });
+
+  const menuBtn = document.getElementById("menuBtn");
+  const nav = document.getElementById("nav");
+  const setMenu = (open) => {
+    nav.classList.toggle("is-open", open);
+    top.classList.toggle("is-open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  };
+  menuBtn.addEventListener("click", () => setMenu(!nav.classList.contains("is-open")));
+  nav.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+
+  const scene = document.getElementById("scene");
+  const win = scene.querySelector(".window");
+  const cloth = scene.querySelector(".cloth");
+  const rail = scene.querySelector(".rail");
+  const note = document.getElementById("sceneNote");
+  const duoSet = document.getElementById("duoSet");
+
+  const COLORS = { marfil: "233,226,211", arena: "205,187,155", grafito: "60,64,72", noche: "35,44,110" };
+  const TRANS = { sunscreen: 0.34, blackout: 0.02, "duo-luz": 0.55, "duo-privacidad": 0.06 };
+  const NOTES = {
+    sunscreen: "Sunscreen filtra la luz, reduce el deslumbramiento y mantiene la vista hacia el exterior.",
+    "duo-luz": "Duo con las franjas abiertas: entra luz suave y sigues viendo hacia afuera.",
+    "duo-privacidad": "Duo con las franjas cerradas: la tela cubre todo el vano y te da privacidad.",
+    blackout: "Blackout bloquea el paso de la luz y deja el ambiente en penumbra."
+  };
+  const MIN_DROP = 0.1;
+  const state = { fabric: "sunscreen", color: "marfil", duo: "luz", drop: 1 };
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+  const render = () => {
+    const key = state.fabric === "duo" ? "duo-" + state.duo : state.fabric;
+    const light = (1 - state.drop) + state.drop * TRANS[key];
+    const pct = Math.round(state.drop * 100);
+    scene.style.setProperty("--drop", state.drop.toFixed(3));
+    scene.style.setProperty("--light", light.toFixed(3));
+    scene.style.setProperty("--rgb", COLORS[state.color]);
+    cloth.dataset.type = state.fabric;
+    cloth.style.setProperty("--shift", state.duo === "privacidad" ? "var(--band)" : "0px");
+    duoSet.hidden = state.fabric !== "duo";
+    note.textContent = NOTES[key];
+    rail.setAttribute("aria-valuenow", String(pct));
+    rail.setAttribute("aria-valuetext", "Cortina bajada al " + pct + "%");
+  };
+
+  const setDrop = (v) => {
+    state.drop = clamp(v, MIN_DROP, 1);
+    render();
+  };
+
+  let raf = 0;
+  const tween = (to, ms) => {
+    cancelAnimationFrame(raf);
+    to = clamp(to, MIN_DROP, 1);
+    if (reduceMotion) { setDrop(to); return; }
+    const from = state.drop;
+    const start = performance.now();
+    scene.classList.add("is-moving");
+    const step = (now) => {
+      const p = Math.min(1, (now - start) / ms);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setDrop(from + (to - from) * eased);
+      if (p < 1) raf = requestAnimationFrame(step);
+      else scene.classList.remove("is-moving");
+    };
+    raf = requestAnimationFrame(step);
+  };
+
+  scene.querySelector(".studio").addEventListener("change", (e) => {
+    const { name, value } = e.target;
+    if (name === "tela") state.fabric = value;
+    if (name === "color") state.color = value;
+    if (name === "franjas") state.duo = value;
+    render();
+  });
+
+  let drag = null;
+  rail.addEventListener("pointerdown", (e) => {
+    cancelAnimationFrame(raf);
+    drag = { y: e.clientY, drop: state.drop, h: win.clientHeight };
+    rail.setPointerCapture(e.pointerId);
+    scene.classList.add("is-moving");
+  });
+  rail.addEventListener("pointermove", (e) => {
+    if (drag) setDrop(drag.drop + (e.clientY - drag.y) / drag.h);
+  });
+  const endDrag = () => {
+    drag = null;
+    scene.classList.remove("is-moving");
+  };
+  rail.addEventListener("pointerup", endDrag);
+  rail.addEventListener("pointercancel", endDrag);
+
+  rail.addEventListener("keydown", (e) => {
+    const steps = { ArrowUp: -0.05, ArrowLeft: -0.05, ArrowDown: 0.05, ArrowRight: 0.05, PageUp: -0.2, PageDown: 0.2 };
+    if (e.key in steps) { e.preventDefault(); setDrop(state.drop + steps[e.key]); }
+    if (e.key === "Home") { e.preventDefault(); setDrop(MIN_DROP); }
+    if (e.key === "End") { e.preventDefault(); setDrop(1); }
+  });
+
+  win.addEventListener("click", (e) => {
+    if (e.target.closest(".rail")) return;
+    const r = win.getBoundingClientRect();
+    tween((e.clientY - r.top - win.clientTop) / win.clientHeight, 500);
+  });
+
+  render();
+  if (reduceMotion) setDrop(0.46);
+  else setTimeout(() => tween(0.46, 1700), 450);
+
+  const IMG_BASE = "https://mzroller.cl/static/media/";
+  const PHOTOS = [
+    ["0c9c8ef18a8d67b57e20e6db7e2dfa1d_1300x1300.c62b5495.jpg", "Hacienda El Pino"],
+    ["13acb858e202397fc02ed078de188afb_1300x1300.0e1081d7.jpg", "Brisas de San Joaquín"],
+    ["1421c02666d511bc5847c2206385d542_1300x1300.6fea12a2.jpg", "Pisco Elqui"],
+    ["1a2eb05d48ad6663f467458254c4ae84_1300x1300.4f4228f4.jpeg", "Edificio Miró"],
+    ["1f54dce1b5d60e3380e77fb94733562e_1300x1300.533d794e.jpg", "Hacienda Nova"],
+    ["257420ed6cb0307c28495f5c6b41417f_1300x1300.94d9e035.jpeg", "La Florida"],
+    ["26e935653c9391fa995db0d754fb42c6_1300x1300.de52a64b.jpg", "El Solar de Peñuelas"],
+    ["2c1b62a25e2ff6ad4531858d93044089_1300x1300.e6190e8f.jpg", "Mirador del Valle"],
+    ["2f4f1b461b1fe83cc52e26d8ffb8e217_1300x1300.b98f2b9e.jpg", "Portal del Valle II"],
+    ["3096bb501d06773d5fba9fe717b277ae_1300x1300.7a2c8c6b.jpg", "Brisas de San Joaquín"],
+    ["3444ccb8dbcedb5c6ec61bddadb6b550_1300x1300.fd466a0a.jpg", "Edificio Avenida Pacífico"],
+    ["37be1efd257697c9e754a992f129e93e_1300x1300.c2faad4d.jpg", "Los Pescadores"],
+    ["3bc584d4ba40464e3ba991d6b9c417cf_1300x1300.d979382a.jpeg", "Parcela La Serena"],
+    ["4444eef53d1626f28f09db9a8644eac0_1300x1300.99d4ed07.jpg", "Mirador del Valle"],
+    ["4f23b34ac7fde13aa0e570b6c856800e_1300x1300.c9d41777.jpg", "Persianas de Exterior"],
+    ["50bb246b4d11136b868812778591c57a_1300x1300.963091ce.jpg", "Portal del Valle II"],
+    ["519089cf30f5bd800dfd67d95292d790_1300x1300.8c41e779.jpg", "Juan Soldado"],
+    ["52bf8652c8305c7ef0ebecbee927eb45_1300x1300.6b37099f.jpg", "Los Pescadores"],
+    ["578377cd8ba736f23bcd5555a301ea76_1300x1300.a02d6cf3.jpg", "Las Torcazas"],
+    ["5c6c70a46738e6157f1b56efd5eee47e_1300x1300.37f640ae.jpeg", "Covid-19"],
+    ["5c7884682d2e3717ffd4ad83fbac5b03_1300x1300.7135e2a8.jpg", "Altovalsol"],
+    ["5d80654359e5a8fc3a72cd0a304c3991_1300x1300.f0b7ca5b.jpg", "Hacienda El Pino"],
+    ["5f1a819baf0838870c944928e945d7b8_1300x1300.66f72815.jpg", "Persianas de Exterior"],
+    ["6142ac7a3a4feb43de87f0e1991a9924_1300x1300.b09e1ee8.jpg", "Hacienda El Pino"],
+    ["621f88298e1274b98fc322f4949f4a86_1300x1300.9a7297d1.jpg", "Portal del Valle II"],
+    ["63a48523780875cac70a65a9bf41b794_1300x1300.b98098ff.jpeg", "Edificio Miró"],
+    ["651c712d358083421ee3e96d8658ca99_1300x1300.4f461a8b.jpg", "El Solar de Peñuelas"],
+    ["66e4ee0b0cfd3254dc77e84317797cf8_1300x1300.cbf16cf5.jpg", "Mirador del Valle"],
+    ["6947eb92a3ff1444a683996a96442d4b_1300x1300.bce9d7b3.jpg", "Otros"],
+    ["6f8da84e095efa6a0d2901db51c72c71_1300x1300.6a77495e.jpg", "Nova Hacienda"],
+    ["700554526c413a4136a0507e203724e3_1300x1300.40070d51.jpg", "Hacienda El Pino"],
+    ["721a3866da385c90a80b0af5baf3300c_1300x1300.6a32ac32.jpg", "Las Torcazas"],
+    ["7429f091d8343ce6dc7190821018d076_1300x1300.9dd13e1a.jpg", "Los Pescadores"],
+    ["76efad2f68581177d711381967b458a9_1300x1300.c98cc085.jpg", "Mirador del Valle"],
+    ["79710c93c650af7b56bd5dcceb52f660_1300x1300.8bbf2b8c.jpg", "Hacienda El Pino"],
+    ["7a7ce441f34044118267c0d4e0b3307b_1300x1300.df9a07f2.jpeg", "Covid-19"],
+    ["7efd90e96ba3e9ad6638fb7ecd3666bb_1300x1300.c930d379.jpg", "Nova Hacienda"],
+    ["866dc0da28450ccba348760308b8a08a_1300x1300.3d6e3410.jpg", "Mirador del Valle"],
+    ["86b823b5896727d6ddbb7b61504362e6_1300x1300.99622a76.jpg", "Otros"],
+    ["874aacde3f4c463e8c34bd15018e4316_1300x1300.7b18dfb0.jpeg", "Hacienda El Pino"],
+    ["879af382e731bb5bafdeca787506c8fc_1300x1300.eeec3b73.jpeg", "Covid-19"],
+    ["8bc77a5a1c03375273e03fe0e882bca1_1300x1300.c0b20150.jpeg", "La Florida"],
+    ["93c79a82e2e4711bb3190b15c6fbc0af_1300x1300.31644a02.jpg", "Avenida Pacífico"],
+    ["95546078697816b9651da819f2d2a9b0_1300x1300.b61d8264.jpg", "Los Pescadores"],
+    ["960ee3623a726df572cbac98ff21f81e_1300x1300.e8788bfd.jpg", "Portal del Valle II"],
+    ["96340d24c548795bc607624f6b198790_1300x1300.8d7e058d.jpeg", "Serena Oriente"],
+    ["96ed83dc41f6f96b9b176d68afd2d871_1300x1300.4d864ba3.jpg", "Las Torcazas"],
+    ["97ef94130b469986a612b07c41547d23_1300x1300.990e4ecf.jpg", "Las Torcazas"],
+    ["a28d71662aab839327dc790f8daf9a86_1300x1300.4991cb63.jpg", "Avenida del Mar"],
+    ["ab11f8f1c8eccd72c7cdaac94c2a7d16_1300x1300.6989be12.jpg", "Altovalsol"],
+    ["b02ae51e79cf2d5daf98287fbf59cabf_1300x1300.77822b2c.jpg", "Hacienda El Pino"],
+    ["b86369ad7b87fb286c6fed9537126faf_1300x1300.227506b2.jpeg", "Covid-19"],
+    ["bdb123a8419271e2fc53187ee19e690e_1300x1300.2ff45e47.jpeg", "Edificio Miró"],
+    ["bf8f4143ed1867ed920b34e608aaf638_1300x1300.d1b3eb78.jpg", "Las Torcazas"],
+    ["c21fcc8c24965f7b47a219ac354d4e7a_1300x1300.dd416bde.jpg", "Parcela La Florida"],
+    ["c4da1b334c7717fa955ac6e235b5e1ab_1300x1300.33d27368.jpg", "Edificio Avenida Pacífico"],
+    ["c5b2e049e04abd15d729a20d5f7862ba_1300x1300.04ac275d.jpg", "Covid-19"],
+    ["c8106f434e692d00738a4a57d0983b75_1300x1300.082b0da2.jpg", "Brisas de San Joaquín"],
+    ["c9825db66de20d7606cbbcd8d0925d38_1300x1300.e45278e6.jpg", "Departamento La Serena"],
+    ["d2c52138d25e481e6749a178f0e47acf_1300x1300.deecb2ac.jpg", "Altovalsol"],
+    ["d790a37fc03c744ea767b532e51993b1_1300x1300.5fe5b21a.jpg", "Hacienda El Pino"],
+    ["d87136e87d2646fbe6c8a8b02282626e_1300x1300.5672de03.jpg", "Altovalsol"],
+    ["e0d3238515c8cbf179028f67e75fcb36_1300x1300.dadb5895.jpg", "Altovalsol"],
+    ["daea13ec66f7bdf360fada448291050d_1300x1300.3cac3c78.jpg", "Juan Soldado"],
+    ["e20f64b9e8e664e3143cfecf42c6ebbf_1300x1300.3b1cf161.jpeg", "Covid-19"],
+    ["e527998bc52334e3b5fd1624e33670ab_1300x1300.69579925.jpg", "Las Torcazas"],
+    ["e6827c921133b20364a67a781face728_1300x1300.bd43873c.jpg", "Las Torcazas"],
+    ["e6cd3d3a0578d55c6ce577926c95c1cd_1300x1300.d44fabdd.jpg", "El Solar de Peñuelas"],
+    ["f0431de590781bf3f59bc1b816a73ca4_1300x1300.3102e491.jpeg", "Showroom"],
+    ["f48df08e6b78c4abc38e9e6bebe7ad2a_1300x1300.94fbc2a2.jpeg", "Covid-19"],
+    ["f681e53b5cf2c0fdaa6a3e4be386bc0d_1300x1300.307f6fb0.jpeg", "Covid-19"],
+    ["f9673a3bc5aba2198aa411a2301c12c4_1300x1300.12e14881.jpg", "Nova Hacienda"]
+  ];
+  const PAGE = 12;
+  const galGrid = document.getElementById("galGrid");
+  const galFiltro = document.getElementById("galFiltro");
+  const galMore = document.getElementById("galMore");
+  const galCount = document.getElementById("galCount");
+  const lb = document.getElementById("lb");
+  const lbImg = document.getElementById("lbImg");
+  const lbCap = document.getElementById("lbCap");
+  const lbPos = document.getElementById("lbPos");
+
+  let list = PHOTOS;
+  let rendered = 0;
+  let current = 0;
+
+  const conteo = {};
+  PHOTOS.forEach(([, legend]) => { conteo[legend] = (conteo[legend] || 0) + 1; });
+  Object.keys(conteo).sort((a, b) => a.localeCompare(b, "es")).forEach((legend) => {
+    const opt = document.createElement("option");
+    opt.value = legend;
+    opt.textContent = legend + " (" + conteo[legend] + ")";
+    galFiltro.appendChild(opt);
+  });
+
+  const showPhoto = () => {
+    const [file, legend] = list[current];
+    lbImg.src = IMG_BASE + file;
+    lbImg.alt = legend;
+    lbCap.textContent = legend;
+    lbPos.textContent = (current + 1) + " de " + list.length;
+  };
+  const openPhoto = (i) => { current = i; showPhoto(); lb.showModal(); };
+  const stepPhoto = (d) => { current = (current + d + list.length) % list.length; showPhoto(); };
+
+  const makeTile = (i) => {
+    const [file, legend] = list[i];
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "tile";
+    btn.setAttribute("aria-label", "Ampliar foto: " + legend);
+    const img = new Image();
+    img.src = IMG_BASE + file;
+    img.alt = "";
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.addEventListener("error", () => btn.remove());
+    const cap = document.createElement("span");
+    cap.className = "tile__cap";
+    cap.textContent = legend;
+    btn.append(img, cap);
+    btn.addEventListener("click", () => openPhoto(i));
+    return btn;
+  };
+
+  const drawMore = () => {
+    const next = galFiltro.value ? list.length : Math.min(list.length, rendered + PAGE);
+    for (let i = rendered; i < next; i++) galGrid.appendChild(makeTile(i));
+    rendered = next;
+    galMore.hidden = rendered >= list.length;
+    galCount.textContent = "Mostrando " + rendered + " de " + list.length + " fotos";
+  };
+
+  const resetGallery = () => {
+    list = galFiltro.value ? PHOTOS.filter(([, legend]) => legend === galFiltro.value) : PHOTOS;
+    galGrid.replaceChildren();
+    rendered = 0;
+    drawMore();
+  };
+
+  galFiltro.addEventListener("change", resetGallery);
+  galMore.addEventListener("click", drawMore);
+  document.getElementById("lbClose").addEventListener("click", () => lb.close());
+  document.getElementById("lbPrev").addEventListener("click", () => stepPhoto(-1));
+  document.getElementById("lbNext").addEventListener("click", () => stepPhoto(1));
+  lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
+  lb.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") stepPhoto(-1);
+    if (e.key === "ArrowRight") stepPhoto(1);
+  });
+  resetGallery();
+
+  const form = document.getElementById("form");
+  const formMsg = document.getElementById("formMsg");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nombre = form.elements.nombre.value.trim();
+    if (!nombre) {
+      formMsg.textContent = "Escribe tu nombre para continuar.";
+      form.elements.nombre.focus();
+      return;
+    }
+    formMsg.textContent = "";
+    const partes = ["Hola, soy " + nombre + ". Quiero cotizar: " + form.elements.tipo.value + "."];
+    const detalle = form.elements.detalle.value.trim();
+    if (detalle) partes.push(detalle);
+    window.open(waLink(partes.join("\n")), "_blank", "noopener");
+  });
+})();
+</script>
+</body>
+</html>
