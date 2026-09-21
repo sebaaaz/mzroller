@@ -113,10 +113,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 .gloss{position:absolute;inset:0;z-index:6;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.16),rgba(255,255,255,0) 38%)}
 
 .cloth{position:absolute;inset:0}
-.cloth[data-type="sunscreen"]{background:rgba(var(--rgb),.6);backdrop-filter:blur(1.6px) saturate(.9);-webkit-backdrop-filter:blur(1.6px) saturate(.9)}
+.cloth[data-type="sunscreen"]{background:rgba(var(--rgb),var(--cloth-a,.6));backdrop-filter:blur(var(--cloth-blur,1.6px)) saturate(.9);-webkit-backdrop-filter:blur(var(--cloth-blur,1.6px)) saturate(.9)}
 .cloth[data-type="blackout"]{background:linear-gradient(90deg,rgba(0,0,0,.14),transparent 14%,transparent 86%,rgba(0,0,0,.14)),rgb(var(--rgb))}
 .cloth[data-type="sunscreen"]::before,.cloth[data-type="blackout"]::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.1) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,rgba(0,0,0,.09) 0 1px,transparent 1px 3px)}
-.cloth[data-type="duo"]::before,.cloth[data-type="duo"]::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(var(--rgb),.97) 50%,rgba(var(--rgb),.16) 50%);background-size:100% calc(var(--band,11px) * 2)}
+.cloth[data-type="duo"]::before,.cloth[data-type="duo"]::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(var(--rgb),.97) 50%,rgba(var(--rgb),var(--duo-sheer-a,.16)) 50%);background-size:100% calc(var(--band,11px) * 2)}
 .cloth[data-type="duo"]::after{background-position:0 var(--shift,0px);transition:background-position .55s cubic-bezier(.6,0,.2,1)}
 
 .studio{margin-top:28px;display:grid;gap:16px}
@@ -383,6 +383,14 @@ button,input,select,textarea{font:inherit;color:inherit}
               <label class="sw" title="Azul noche"><input type="radio" name="color" value="noche"><span style="--sw:#232c6e"></span><span class="sr">Azul noche</span></label>
             </div>
           </fieldset>
+          <fieldset id="openSet">
+            <legend>Apertura de tela</legend>
+            <div class="studio__row">
+              <label class="chip"><input type="radio" name="apertura" value="1"><span>1%</span></label>
+              <label class="chip"><input type="radio" name="apertura" value="5" checked><span>5%</span></label>
+              <label class="chip"><input type="radio" name="apertura" value="10"><span>10%</span></label>
+            </div>
+          </fieldset>
           <fieldset id="duoSet" hidden>
             <legend>Franjas</legend>
             <div class="studio__row">
@@ -418,6 +426,7 @@ button,input,select,textarea{font:inherit;color:inherit}
             <dl>
               <dt>Luz</dt><dd>Entra filtrada, sin reflejos molestos</dd>
               <dt>Vista</dt><dd>Se mantiene hacia el exterior</dd>
+              <dt>Apertura</dt><dd>Disponible en 1%, 5% o 10%, según cuánta luz y vista quieras dejar pasar</dd>
               <dt>Ideal para</dt><dd>Living, comedor, oficinas y espacios de trabajo</dd>
             </dl>
           </div>
@@ -436,6 +445,7 @@ button,input,select,textarea{font:inherit;color:inherit}
             <dl>
               <dt>Luz</dt><dd>Regulable en cualquier momento del día</dd>
               <dt>Vista</dt><dd>Visible con las franjas abiertas</dd>
+              <dt>Apertura</dt><dd>La franja translúcida viene en 1%, 5% o 10% de apertura</dd>
               <dt>Ideal para</dt><dd>Living, dormitorios y oficinas</dd>
             </dl>
           </div>
@@ -765,30 +775,48 @@ button,input,select,textarea{font:inherit;color:inherit}
   const rail = scene.querySelector(".rail");
   const note = document.getElementById("sceneNote");
   const duoSet = document.getElementById("duoSet");
+  const openSet = document.getElementById("openSet");
 
   const COLORS = { marfil: "233,226,211", arena: "205,187,155", grafito: "60,64,72", noche: "35,44,110" };
-  const TRANS = { sunscreen: 0.34, blackout: 0.02, "duo-luz": 0.55, "duo-privacidad": 0.06 };
+  const TRANS = {
+    sunscreen: { 1: 0.16, 5: 0.34, 10: 0.52 },
+    blackout: 0.02,
+    "duo-luz": { 1: 0.30, 5: 0.55, 10: 0.74 },
+    "duo-privacidad": 0.06
+  };
+  const OPEN = {
+    1: { alpha: 0.82, blur: 2.6, duoSheer: 0.30 },
+    5: { alpha: 0.6, blur: 1.6, duoSheer: 0.16 },
+    10: { alpha: 0.42, blur: 0.7, duoSheer: 0.08 }
+  };
   const NOTES = {
-    sunscreen: "Sunscreen filtra la luz, reduce el deslumbramiento y mantiene la vista hacia el exterior.",
-    "duo-luz": "Duo con las franjas abiertas: entra luz suave y sigues viendo hacia afuera.",
-    "duo-privacidad": "Duo con las franjas cerradas: la tela cubre todo el vano y te da privacidad.",
-    blackout: "Blackout bloquea el paso de la luz y deja el ambiente en penumbra."
+    sunscreen: (ap) => "Sunscreen con apertura de tela " + ap + "% filtra la luz, reduce el deslumbramiento y mantiene la vista hacia el exterior.",
+    "duo-luz": (ap) => "Duo con las franjas abiertas y apertura de tela " + ap + "%: entra luz suave y sigues viendo hacia afuera.",
+    "duo-privacidad": () => "Duo con las franjas cerradas: la tela cubre todo el vano y te da privacidad.",
+    blackout: () => "Blackout bloquea el paso de la luz y deja el ambiente en penumbra."
   };
   const MIN_DROP = 0.1;
-  const state = { fabric: "sunscreen", color: "marfil", duo: "luz", drop: 1 };
+  const state = { fabric: "sunscreen", color: "marfil", duo: "luz", apertura: "5", drop: 1 };
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
   const render = () => {
     const key = state.fabric === "duo" ? "duo-" + state.duo : state.fabric;
-    const light = (1 - state.drop) + state.drop * TRANS[key];
+    const base = TRANS[key];
+    const trans = typeof base === "object" ? base[state.apertura] : base;
+    const light = (1 - state.drop) + state.drop * trans;
     const pct = Math.round(state.drop * 100);
+    const open = OPEN[state.apertura];
     scene.style.setProperty("--drop", state.drop.toFixed(3));
     scene.style.setProperty("--light", light.toFixed(3));
     scene.style.setProperty("--rgb", COLORS[state.color]);
+    scene.style.setProperty("--cloth-a", open.alpha);
+    scene.style.setProperty("--cloth-blur", open.blur + "px");
+    scene.style.setProperty("--duo-sheer-a", open.duoSheer);
     cloth.dataset.type = state.fabric;
     cloth.style.setProperty("--shift", state.duo === "privacidad" ? "var(--band)" : "0px");
     duoSet.hidden = state.fabric !== "duo";
-    note.textContent = NOTES[key];
+    openSet.hidden = state.fabric === "blackout";
+    note.textContent = NOTES[key](state.apertura);
     rail.setAttribute("aria-valuenow", String(pct));
     rail.setAttribute("aria-valuetext", "Cortina bajada al " + pct + "%");
   };
@@ -821,6 +849,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     if (name === "tela") state.fabric = value;
     if (name === "color") state.color = value;
     if (name === "franjas") state.duo = value;
+    if (name === "apertura") state.apertura = value;
     render();
   });
 
