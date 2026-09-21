@@ -194,6 +194,11 @@ button,input,select,textarea{font:inherit;color:inherit}
 .foot{padding:48px 0 104px;background:#080b2b;color:rgba(236,238,244,.72);font-size:.95rem}
 .foot a{color:#fff}
 .foot__in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.social{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:.95rem;font-weight:600}
+.social svg{width:28px;height:28px;flex:none}
+.social:hover{opacity:.82}
+.social--inline svg{width:22px;height:22px}
+.foot__social{display:flex;flex-wrap:wrap;align-items:center;gap:20px}
 
 .gal__bar{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 24px;margin-bottom:28px}
 .gal__filter{display:grid;gap:8px}
@@ -273,7 +278,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Cortinas Roller La Serena MZRoller","url":"https://mzroller.cl","telephone":"+56983655707","description":"Fábrica de cortinas roller Duo, Blackout y Sunscreen y persianas de exterior en La Serena. Confección e instalación, servicio técnico y transformaciones.","address":{"@type":"PostalAddress","streetAddress":"Guillermo Ulriksen 1627","addressLocality":"La Serena","addressRegion":"Coquimbo","addressCountry":"CL"},"areaServed":"La Serena","sameAs":["https://www.facebook.com/cortinasroller.laserena.3"]}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Cortinas Roller La Serena MZRoller","url":"https://mzroller.cl","telephone":"+56983655707","description":"Fábrica de cortinas roller Duo, Blackout y Sunscreen y persianas de exterior en La Serena. Confección e instalación, servicio técnico y transformaciones.","address":{"@type":"PostalAddress","streetAddress":"Guillermo Ulriksen 1627","addressLocality":"La Serena","addressRegion":"Coquimbo","addressCountry":"CL"},"areaServed":"La Serena","sameAs":["https://www.facebook.com/share/1ErKj41A9X/","https://www.instagram.com/mz_roller"]}
 </script>
 </head>
 <body>
@@ -294,7 +299,27 @@ button,input,select,textarea{font:inherit;color:inherit}
       <stop offset="0" stop-color="#3a6f9f"/>
       <stop offset="1" stop-color="#12345c"/>
     </linearGradient>
+    <radialGradient id="g-instagram" cx="30%" cy="107%" r="150%">
+      <stop offset="0" stop-color="#FFDD55"/>
+      <stop offset=".1" stop-color="#FFDD55"/>
+      <stop offset=".5" stop-color="#FF543E"/>
+      <stop offset="1" stop-color="#C837AB"/>
+    </radialGradient>
   </defs>
+  <symbol id="icon-whatsapp" viewBox="0 0 32 32">
+    <circle cx="16" cy="16" r="16" fill="#25D366"/>
+    <path fill="#fff" d="M16.02 7.4c-4.74 0-8.6 3.83-8.6 8.55 0 1.5.4 2.96 1.15 4.24L7.4 24.6l4.58-1.14a8.66 8.66 0 0 0 4.03 1.02h.01c4.74 0 8.6-3.83 8.6-8.55 0-2.28-.9-4.43-2.53-6.05a8.7 8.7 0 0 0-6.07-2.48Zm0 15.64h-.01a7.1 7.1 0 0 1-3.57-.97l-.26-.15-2.72.68.73-2.62-.17-.27a7.02 7.02 0 0 1-1.1-3.75c0-3.9 3.2-7.08 7.12-7.08a7.1 7.1 0 0 1 5.03 2.06 7 7 0 0 1 2.1 5.01c0 3.9-3.2 7.09-7.15 7.09Zm3.9-5.31c-.21-.11-1.26-.62-1.46-.69-.2-.07-.34-.11-.48.11-.14.21-.55.69-.68.83-.12.14-.25.16-.46.05-.21-.1-.9-.33-1.71-1.05a6.4 6.4 0 0 1-1.18-1.46c-.12-.21-.01-.33.1-.43.1-.1.21-.25.32-.38.1-.13.14-.21.21-.35.07-.14.03-.27-.02-.38-.05-.11-.48-1.15-.66-1.58-.17-.41-.35-.36-.48-.36l-.41-.01c-.14 0-.38.05-.58.27-.2.21-.76.74-.76 1.8s.78 2.09.89 2.24c.11.14 1.53 2.34 3.72 3.28.52.22.92.36 1.24.46.52.16.99.14 1.36.09.42-.06 1.26-.51 1.44-1.01.18-.5.18-.92.12-1.01-.05-.09-.19-.15-.4-.26Z"/>
+  </symbol>
+  <symbol id="icon-facebook" viewBox="0 0 32 32">
+    <circle cx="16" cy="16" r="16" fill="#1877F2"/>
+    <path fill="#fff" d="M20.4 16.6h-2.9V25h-3.4v-8.4h-2v-2.9h2v-2.1c0-2.5 1.4-4.1 4.3-4.1h2.5v2.9h-1.6c-1.1 0-1.3.5-1.3 1.3v2h2.9l-.5 2.9Z"/>
+  </symbol>
+  <symbol id="icon-instagram" viewBox="0 0 32 32">
+    <circle cx="16" cy="16" r="16" fill="url(#g-instagram)"/>
+    <rect x="9" y="9" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.6"/>
+    <circle cx="16" cy="16" r="3.6" fill="none" stroke="#fff" stroke-width="1.6"/>
+    <circle cx="20.2" cy="11.8" r="1" fill="#fff"/>
+  </symbol>
   <symbol id="vista" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
     <rect width="400" height="400" fill="url(#g-cielo)"/>
     <circle cx="255" cy="238" r="130" fill="url(#g-sol)"/>
@@ -672,7 +697,8 @@ button,input,select,textarea{font:inherit;color:inherit}
         </div>
         <dl class="contact__list">
           <dt>Dirección</dt><dd>Guillermo Ulriksen #1627, esquina Raúl Bitrán<br>La Serena, IV Región</dd>
-          <dt>Facebook</dt><dd><a href="https://www.facebook.com/cortinasroller.laserena.3" target="_blank" rel="noopener">Cortinas Roller La Serena</a></dd>
+          <dt>Facebook</dt><dd><a class="social social--inline" href="https://www.facebook.com/share/1ErKj41A9X/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#icon-facebook"/></svg><span>Cortinas Roller La Serena</span></a></dd>
+          <dt>Instagram</dt><dd><a class="social social--inline" href="https://www.instagram.com/mz_roller" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#icon-instagram"/></svg><span>@mz_roller</span></a></dd>
         </dl>
       </div>
 
@@ -714,7 +740,11 @@ button,input,select,textarea{font:inherit;color:inherit}
 <footer class="foot">
   <div class="wrap foot__in">
     <p>Fábrica de cortinas roller y persianas de exterior en La Serena.</p>
-    <p><a href="https://wa.me/56983655707" target="_blank" rel="noopener">WhatsApp +56 9 8365 5707</a> &nbsp;&nbsp; <a href="https://www.facebook.com/cortinasroller.laserena.3" target="_blank" rel="noopener">Facebook</a></p>
+    <div class="foot__social">
+      <a class="social" href="https://wa.me/56983655707" target="_blank" rel="noopener" aria-label="WhatsApp: +56 9 8365 5707"><svg aria-hidden="true"><use href="#icon-whatsapp"/></svg><span>+56 9 8365 5707</span></a>
+      <a class="social" href="https://www.facebook.com/share/1ErKj41A9X/" target="_blank" rel="noopener" aria-label="MZRoller en Facebook"><svg aria-hidden="true"><use href="#icon-facebook"/></svg><span>Facebook</span></a>
+      <a class="social" href="https://www.instagram.com/mz_roller" target="_blank" rel="noopener" aria-label="MZRoller en Instagram"><svg aria-hidden="true"><use href="#icon-instagram"/></svg><span>Instagram</span></a>
+    </div>
     <p>&copy; <span id="year">2026</span> MZRoller</p>
   </div>
 </footer>
