@@ -808,16 +808,17 @@ button,input,select,textarea{font:inherit;color:inherit}
   const openSet = document.getElementById("openSet");
 
   const COLORS = { marfil: "233,226,211", arena: "205,187,155", grafito: "60,64,72", noche: "35,44,110" };
+  const SUNSCREEN_TRANS = { 1: 0.16, 5: 0.34, 10: 0.52 };
   const TRANS = {
-    sunscreen: { 1: 0.16, 5: 0.34, 10: 0.52 },
+    sunscreen: SUNSCREEN_TRANS,
     blackout: 0.02,
-    "duo-luz": { 1: 0.30, 5: 0.55, 10: 0.74 },
+    "duo-luz": SUNSCREEN_TRANS,
     "duo-privacidad": 0.06
   };
   const OPEN = {
-    1: { alpha: 0.82, blur: 2.6, duoSheer: 0.30 },
-    5: { alpha: 0.6, blur: 1.6, duoSheer: 0.16 },
-    10: { alpha: 0.42, blur: 0.7, duoSheer: 0.08 }
+    1: { alpha: 0.82, blur: 2.6 },
+    5: { alpha: 0.6, blur: 1.6 },
+    10: { alpha: 0.42, blur: 0.7 }
   };
   const NOTES = {
     sunscreen: (ap) => "Sunscreen con apertura de tela " + ap + "% filtra la luz, reduce el deslumbramiento y mantiene la vista hacia el exterior.",
@@ -841,7 +842,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     scene.style.setProperty("--rgb", COLORS[state.color]);
     scene.style.setProperty("--cloth-a", open.alpha);
     scene.style.setProperty("--cloth-blur", open.blur + "px");
-    scene.style.setProperty("--duo-sheer-a", open.duoSheer);
+    scene.style.setProperty("--duo-sheer-a", open.alpha);
     cloth.dataset.type = state.fabric;
     cloth.style.setProperty("--shift", state.duo === "privacidad" ? "var(--band)" : "0px");
     duoSet.hidden = state.fabric !== "duo";
